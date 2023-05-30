@@ -70,13 +70,6 @@ def get_readme(
 
     readme += f'# Hi, I\'m {name} 👋\n\n'
 
-    # Badges and Contacts
-    readme += _get_shield(name='Linkedin', logo='linkedin', color='0A66C2', logo_color='white', url=linkedin) + '\n'
-    readme += _get_shield(name='Github', logo='github', color='181717', logo_color='white', url=github) + '\n'
-    readme += _get_shield(name='Website', logo='googlechrome', color='FF9900', logo_color='white', url=website) + '\n'
-    readme += _get_shield(name=location, logo='googlemaps', color='34A853', logo_color='white', url=None) + '\n'
-    readme += '---\n\n'
-
     # Description
     readme += f'{description}\n'
     readme += '---\n\n'

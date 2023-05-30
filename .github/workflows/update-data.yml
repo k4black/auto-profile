@@ -43,5 +43,7 @@ jobs:
           cp -r build/github-profile/. remote/github-profile
           cd remote/github-profile
           git add README.md
-          git commit -m "Update from auto-profile repo"
-          git push --force
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "Update from auto-profile repo"
+            git push --force
+          fi

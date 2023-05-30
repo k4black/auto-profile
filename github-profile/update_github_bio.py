@@ -52,7 +52,7 @@ def main(
     )
     assert response.status_code == 204 or response.status_code == 304, (response.status_code, response.text)
     # add social accounts
-    all_urls = [data['bio']['linkedin'], data['bio']['website']]
+    all_urls = [data['bio']['linkedin']]
     all_urls = [i if 'http' in i else 'https://'+i for i in all_urls]
     response = requests.post(
         social_profiles_url,
