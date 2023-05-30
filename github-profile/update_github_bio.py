@@ -43,18 +43,21 @@ def main(
         headers=headers,
     )
     assert response.status_code == 200,(response.status_code, response.text)
+    old_urls = [i['url'] for i in response.json()]
     # delete all accounts
     response = requests.delete(
         social_profiles_url,
         headers=headers,
-        json={'account_urls': [i['url'] for i in response.json()]},
+        json={'account_urls': old_urls},
     )
     assert response.status_code == 204 or response.status_code == 304, (response.status_code, response.text)
     # add social accounts
+    all_urls = [data['bio']['linkedin'], data['bio']['website']]
+    all_urls = [i if 'http' in i else 'https://'+i for i in all_urls]
     response = requests.post(
         social_profiles_url,
         headers=headers,
-        json={'account_urls': [data['bio']['linkedin'], data['bio']['website']]},
+        json={'account_urls': all_urls},
     )
     assert response.status_code == 201 or response.status_code == 304, (response.status_code, response.text)
 
