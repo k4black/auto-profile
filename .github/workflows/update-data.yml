@@ -39,8 +39,6 @@ jobs:
           git clone https://x-access-token:${{ secrets.PAT }}@github.com/k4black/k4black.git remote/github-profile
           cp -r build/github-profile/. remote/github-profile
           cd remote/github-profile
-          ls -lah
           git add README.md
-          git status
-          git commit -m "Update from `auto-profile` repo"
+          git commit -m "Update from auto-profile repo"
           git push --force

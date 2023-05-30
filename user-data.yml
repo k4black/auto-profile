@@ -146,6 +146,22 @@ projects:
       - tag1
       - tag2
 
+  - title: Project 2
+    description: Brief description of the project
+    url: URL to the project
+    type: edu
+    tags:
+      - tag1
+      - arf
+
+  - title: Project 2
+    description: Brief other of the project
+    url: URL to the project
+    type: edu
+    tags:
+      - tttt
+      - tag6
+
   - title: Project 1
     description: Brief description of the project
     url: URL to the project
