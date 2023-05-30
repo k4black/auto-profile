@@ -43,21 +43,20 @@ def main(
         headers=headers,
     )
     assert response.status_code == 200, response.text
-    existed_accounts_urls = [i['url'] for i in response.json()]
     # delete all accounts
     response = requests.delete(
         social_profiles_url,
         headers=headers,
-        json=existed_accounts_urls,
+        json={'account_urls': [i['url'] for i in response.json()]},
     )
     assert response.status_code == 204, response.text
     # add social accounts
-    data = {'account_urls': [data['bio']['linkedin'], data['bio']['website']]}
     requests.post(
         social_profiles_url,
         headers=headers,
-        json=data,
+        json={'account_urls': [data['bio']['linkedin'], data['bio']['website']]},
     )
+    assert response.status_code == 201, response.text
 
 
 if __name__ == '__main__':
