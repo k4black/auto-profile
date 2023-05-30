@@ -51,7 +51,7 @@ def main(
     )
     assert response.status_code == 204 or response.status_code == 304, (response.status_code, response.text)
     # add social accounts
-    requests.post(
+    response = requests.post(
         social_profiles_url,
         headers=headers,
         json={'account_urls': [data['bio']['linkedin'], data['bio']['website']]},
