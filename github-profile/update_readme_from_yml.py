@@ -42,6 +42,16 @@ def _get_skills_tagline(
         for tag in tags
     )
 
+def _get_projects_table(
+        projects: list,
+) -> str:
+    table = '| Project | Description | Stack |\n'
+    table += '| --- | --- | --- |\n'
+    for project in projects:
+        table += f'| [{project["name"]}]({project["url"]}) ({project["year"]})| {project["description"]} | {" ".join(_get_shield(tag, color="f3f3ff") for tag in project["tags"])} |\n'
+    table += '\n'
+    return table
+
 
 def get_readme(
         name: str,
@@ -83,18 +93,12 @@ def get_readme(
     # Projects
     readme += '### 📦 Projects\n'
     readme += '#### Personal\n'
-    readme += '| Project | Description | Stack |\n'
-    readme += '| --- | --- | --- |\n'
-    for project in filter(lambda p: p['type'] == 'personal', projects):
-        readme += f'| [{project["title"]}]({project["url"]}) | {project["description"]} | {" ".join(_get_shield(tag, color="b3e0ff") for tag in project["tags"])} |\n'
+    readme += _get_projects_table(filter(lambda p: p['type'] == 'personal', projects))
+    readme += '#### Open Source\n'
+    readme += _get_projects_table(filter(lambda p: p['type'] == 'open-source', projects))
     readme += '#### Educational\n'
-    readme += '| Project | Description | Stack |\n'
-    readme += '| --- | --- | --- |\n'
-    for project in filter(lambda p: p['type'] == 'edu', projects):
-        readme += f'| [{project["title"]}]({project["url"]}) | {project["description"]} | {" ".join(_get_shield(tag, color="b3e0ff") for tag in project["tags"])} |\n'
-    readme += '\n'
+    readme += _get_projects_table(filter(lambda p: p['type'] == 'educational', projects))
     readme += '---\n\n'
-
 
     # Stats
     if include_stats:

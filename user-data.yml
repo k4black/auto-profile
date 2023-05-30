@@ -138,34 +138,47 @@ certificates:
 
 
 projects:
-  - title: Project 1
-    description: Brief description of the project
-    url: URL to the project
-    type: edu
+  - name: EDOS 2023
+    description: Public repository for the EDOS 2023 submission by LCT-1 team utilising multitasking approach;
+    url: https://github.com/lct-rug-2022/edos-2023
+    year: 2023
+    type: educational
     tags:
-      - tag1
-      - tag2
+      - transformers
+      - machamp
+      - multitasking
+      - python
+      - dvc
 
-  - title: Project 2
-    description: Brief description of the project
-    url: URL to the project
-    type: edu
-    tags:
-      - tag1
-      - arf
-
-  - title: Project 2
-    description: Brief other of the project
-    url: URL to the project
-    type: edu
-    tags:
-      - tttt
-      - tag6
-
-  - title: Project 1
-    description: Brief description of the project
-    url: URL to the project
+  - name: auto-profile
+    description: Small project to auto generate github profile, personal website and latex cv using single yaml file;
+    url: https://github.com/k4black/auto-profile
     type: personal
+    year: 2023
     tags:
-      - tag1
-      - tag2
+      - python
+      - latex
+      - github-actions
+      - tba
+
+  - name: fastapi-jwt
+    description: FastAPI-native extension for JWT Auth;
+    url: https://github.com/k4black/fastapi-jwt
+    type: open-source
+    year: 2021
+    tags:
+      - jwt
+      - python
+      - fastapi
+      - pytest
+
+  - name: Manytask
+    description: Auto assignments testing system for YSDA;
+    url: https://github.com/yandexdataschool/manytask
+    type: open-source
+    year: 2022
+    tags:
+      - testing
+      - python
+      - flask
+      - pytest
