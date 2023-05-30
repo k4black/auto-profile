@@ -48,7 +48,7 @@ def _get_projects_table(
     table = '| Project | Description | Stack |\n'
     table += '| --- | --- | --- |\n'
     for project in projects:
-        table += f'| [{project["name"]}]({project["url"]}) ({project["year"]})| {project["description"]} | {" ".join(_get_shield(tag, color="f3f3ff") for tag in project["tags"])} |\n'
+        table += f'| [{project["name"]}]({project["url"]}) *({project["year"]})* | {project["description"]} | {" ".join(_get_shield(tag, color="f3f3ff") for tag in project["tags"])} |\n'
     table += '\n'
     return table
 
