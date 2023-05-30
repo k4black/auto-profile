@@ -34,6 +34,9 @@ jobs:
       - name: Create github profile Readme
         run: |
           python github-profile/update_readme_from_yml.py --data=user-data.yml --output=build/github-profile/README.md
+      - name: Update github bio
+        run: |
+          python github-profile/update_github_bio.py --data=user-data.yml --api_token=${{ secrets.PAT }}
       - name: Push github profile files
         run: |
           git clone https://x-access-token:${{ secrets.PAT }}@github.com/k4black/k4black.git remote/github-profile

@@ -1,0 +1,64 @@
+from pathlib import Path
+
+import typer as typer
+import requests
+import yaml
+from github import Github
+
+
+REPO_ROOT = Path(__file__).parent.parent
+
+
+def main(
+        data: Path = REPO_ROOT / 'user-data.yml',
+        api_token: str = typer.Option(..., envvar='PAT'),
+) -> None:
+    """Update github profile bio with links and short description Github"""
+    with open(data, 'r') as f:
+        data = yaml.safe_load(f)
+
+    api = Github(api_token)
+
+    user = api.get_user()
+
+    user.edit(
+        # name=data['bio']['name'],
+        bio=data['summary']['short'],
+        location=data['bio']['location'],
+        # email=data['bio']['email'],
+        blog=data['bio']['website'],
+        # company=data.get('company', ''),
+        hireable=data.get('hireable', False),
+    )
+    # TODO: add social profiles with PyGithub when available, now requests
+    headers = {
+        'Authorization': f'Bearer {api_token}',
+        'Accept': 'application/vnd.github+json',
+        'X-GitHub-Api-Version': '2022-11-28',
+    }
+    social_profiles_url = 'https://api.github.com/user/social_accounts'
+    # get list of account
+    response = requests.get(
+        social_profiles_url,
+        headers=headers,
+    )
+    assert response.status_code == 200, response.text
+    existed_accounts_urls = [i['url'] for i in response.json()]
+    # delete all accounts
+    response = requests.delete(
+        social_profiles_url,
+        headers=headers,
+        json=existed_accounts_urls,
+    )
+    assert response.status_code == 204, response.text
+    # add social accounts
+    data = {'account_urls': [data['bio']['linkedin'], data['bio']['website']]}
+    requests.post(
+        social_profiles_url,
+        headers=headers,
+        json=data,
+    )
+
+
+if __name__ == '__main__':
+    typer.run(main)

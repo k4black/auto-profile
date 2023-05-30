@@ -11,14 +11,14 @@ bio:
   linkedin: linkedin.com/in/kdchernyshev
   github: github.com/k4black
   website: k4black.github.io
+  hireable: false
 
 summary:
-  short: A short bio about yourself
+  short: Passionate NLP Scientist with 4+ experience, love NLG;
   long: >
-    A longer bio about yourself
-    More words same paragraph
-    
-    New paragraph, new line
+    HSE, Russia graduate (BaSc with Honors) Erasmus Mundus LCT MsA till 2024. 
+    Has 5+ years of programming experience, 4+ years of Data Science Research experience. 
+    Employed in Startups, Yandex DS School, EPAM, finished 8+ ML research projects.
   github_profile: |
     - 💼 NLP Intern at [Jetbrains Research](https://www.jetbrains.com/research/);
     - 👨‍🏫 Lecturer and Python Course manager at the [Yandex School of Data Analysis](https://academy.yandex.com/dataschool/);
