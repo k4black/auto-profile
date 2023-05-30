@@ -42,21 +42,21 @@ def main(
         social_profiles_url,
         headers=headers,
     )
-    assert response.status_code == 200, response.text
+    assert response.status_code == 200,(response.status_code, response.text)
     # delete all accounts
     response = requests.delete(
         social_profiles_url,
         headers=headers,
         json={'account_urls': [i['url'] for i in response.json()]},
     )
-    assert response.status_code == 204 or response.status_code == 304, response.text
+    assert response.status_code == 204 or response.status_code == 304, (response.status_code, response.text)
     # add social accounts
     requests.post(
         social_profiles_url,
         headers=headers,
         json={'account_urls': [data['bio']['linkedin'], data['bio']['website']]},
     )
-    assert response.status_code == 201 or response.status_code == 304, response.text
+    assert response.status_code == 201 or response.status_code == 304, (response.status_code, response.text)
 
 
 if __name__ == '__main__':
