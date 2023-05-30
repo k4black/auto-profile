@@ -1,0 +1,155 @@
+version: 0.0.1
+settings:
+  include-github-stats: true
+
+
+bio:
+  name: Konstantin Chernyshev
+  informal: Konstantin
+  email: kdchernyshev+job@gmail.com
+  location: Groningen, Netherlands
+  linkedin: linkedin.com/in/kdchernyshev
+  github: github.com/k4black
+  website: k4black.github.io
+
+summary:
+  short: A short bio about yourself
+  long: >
+    A longer bio about yourself
+    More words same paragraph
+    
+    New paragraph, new line
+  github_profile: |
+    - 💼 NLP Intern at [Jetbrains Research](https://www.jetbrains.com/research/);
+    - 👨‍🏫 Lecturer and Python Course manager at the [Yandex School of Data Analysis](https://academy.yandex.com/dataschool/);
+    - 📄 **['Language & Communication Technologies'](https://lct-master.org/) Erasmus Mundus student** at the University of Groningen and Saarland University;
+    - 💻 Interested in NLP and SP, as well as in efficient DL-models Inference;
+    - 📝 More: [linkedin.com/in/kdchernyshev](https://www.linkedin.com/in/kdchernyshev/) or [CV file](https://github.com/k4black/k4black/blob/main/Chernyshev_CV_anonimized.pdf).
+
+
+
+personal:
+  tags:
+    - Music Production
+    - Juggling
+    - Slackline
+  summary: >
+    Cheerful and sociable person, keen on slackline and juggling, 
+    love music making creativity and strive to master the guitar.
+
+
+skills:
+  - group: Data Science
+    tags:
+      - name: NLP
+        level: 3
+      - name: DL
+        level: 3
+      - name: ML
+        level: 2
+      - name: NLU
+        level: 2
+      - name: Summarization
+        level: 2
+      - name: Graph Models
+        level: 1
+      - name: Speech
+      - name: CV
+      - name: RL
+  - group: Frameworks
+    tags:
+      - name: HuggingFace
+        level: 3
+      - name: PyTorch
+        level: 3
+      - name: sklearn
+        level: 3
+      - name: Tensorflow
+        level: 1
+      - name: NLPCore
+        level: 1
+      - name: TorchText
+  - group: Programming Languages
+    tags:
+      - name: Python
+        level: 3
+      - name: C++
+        level: 1
+      - name: CUDA
+        level: 1
+      - name: GoLang
+      - name: Dart
+  - group: Development Tools
+    tags:
+      - name: git
+        level: 3
+      - name: Docker
+        level: 3
+      - name: Neptune.ai
+        level: 3
+      - name: GitLab-CI
+        level: 3
+      - name: GitHub-Actions
+        level: 3
+      - name: ONNX
+        level: 1
+      - name: TensorRT
+        level: 1
+  - group: Languages
+    tags:
+      - name: Russian
+        level: 3
+      - name: English
+        level: 2
+      - name: German
+      - name: Serbian
+
+
+publications:
+  - title: Publication 1
+    journal: Journal 1
+    url: URL to the publication
+    abstract: >
+      Brief description of the publication
+
+
+experience:
+  - role: Software Engineer
+    company: ABC Corp
+    url: https://www.abc.com
+    start: Aug 2019
+    end: Present
+    description:
+      - A description of your role
+      - Another description
+      - Another description
+
+education:
+  - degree: Bachelor's in Computer Science
+    institution: University XYZ
+    start: Sep 2018
+    end: Aug 2022
+
+
+certificates:
+  - DL Optimization and Deployment using TensorFlow and TensorRT
+  - Fundamentals of Accelerated Computing with CUDA Python
+  - Intel Delta Courses (Delta 9, Delta 11)
+
+
+projects:
+  - title: Project 1
+    description: Brief description of the project
+    url: URL to the project
+    type: edu
+    tags:
+      - tag1
+      - tag2
+
+  - title: Project 1
+    description: Brief description of the project
+    url: URL to the project
+    type: personal
+    tags:
+      - tag1
+      - tag2

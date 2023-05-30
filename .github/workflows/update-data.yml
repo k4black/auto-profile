@@ -1,0 +1,44 @@
+name: Update all profiles on push
+
+
+on:
+  push:
+    branches:
+      - main
+
+
+jobs:
+  update-github-profile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout this repository
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
+          fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
+
+      - name: Python Setup
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+          cache: 'pip' # caching pip dependencies
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Configure git
+        run: |
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+
+      - name: Create github profile Readme
+        run: |
+          python github-profile/update_readme_from_yml.py --data=user-data.yml --output=build/github-profile/README.md
+      - name: Push github profile files
+        run: |
+          git clone https://x-access-token:${{ secrets.PAT }}@github.com/k4black/k4black.git remote/github-profile
+          cp -r build/github-profile/. remote/github-profile
+          cd remote/github-profile
+          git add .
+          git commit -m "Update from `auto-profile` repo"
+          git push --force
