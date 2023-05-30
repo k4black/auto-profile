@@ -49,14 +49,14 @@ def main(
         headers=headers,
         json={'account_urls': [i['url'] for i in response.json()]},
     )
-    assert response.status_code == 204, response.text
+    assert response.status_code == 204 or response.status_code == 304, response.text
     # add social accounts
     requests.post(
         social_profiles_url,
         headers=headers,
         json={'account_urls': [data['bio']['linkedin'], data['bio']['website']]},
     )
-    assert response.status_code == 201, response.text
+    assert response.status_code == 201 or response.status_code == 304, response.text
 
 
 if __name__ == '__main__':
