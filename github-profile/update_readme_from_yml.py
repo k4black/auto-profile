@@ -44,12 +44,12 @@ def _get_skills_tagline(
 
 def _get_projects_table(
         projects: list,
+        subtitle: str,
 ) -> str:
-    table = '| Project | Description | Stack |\n'
-    table += '| --- | --- | --- |\n'
+    table = ''
+    table += f'| {subtitle} | | |\n'
     for project in projects:
         table += f'| [{project["name"]}]({project["url"]}) *({project["year"]})* | {project["description"]} | {" ".join(_get_shield(tag, color="f3f3ff") for tag in project["tags"])} |\n'
-    table += '\n'
     return table
 
 
@@ -70,6 +70,13 @@ def get_readme(
 
     readme += f'# Hi, I\'m {name} 👋\n\n'
 
+    # # Badges and Contacts
+    # readme += _get_shield(name='Linkedin', logo='linkedin', color='0A66C2', logo_color='white', url=linkedin) + '\n'
+    # readme += _get_shield(name='Github', logo='github', color='181717', logo_color='white', url=github) + '\n'
+    # readme += _get_shield(name='Website', logo='googlechrome', color='FF9900', logo_color='white', url=website) + '\n'
+    # readme += _get_shield(name=location, logo='googlemaps', color='34A853', logo_color='white', url=None) + '\n'
+    # readme += '---\n\n'
+
     # Description
     readme += f'{description}\n'
     readme += '---\n\n'
@@ -86,11 +93,11 @@ def get_readme(
     # Projects
     readme += '### 📦 Projects\n'
     readme += '#### Personal\n'
-    readme += _get_projects_table(filter(lambda p: p['type'] == 'personal', projects))
-    readme += '#### Open Source\n'
-    readme += _get_projects_table(filter(lambda p: p['type'] == 'open-source', projects))
-    readme += '#### Educational\n'
-    readme += _get_projects_table(filter(lambda p: p['type'] == 'educational', projects))
+    readme += '| Project | Description | Stack |\n'
+    readme += '| --- | --- | --- |\n'
+    readme += _get_projects_table(filter(lambda p: p['type'] == 'personal', projects), subtitle='Personal')
+    readme += _get_projects_table(filter(lambda p: p['type'] == 'open-source', projects), subtitle='Open Source')
+    readme += _get_projects_table(filter(lambda p: p['type'] == 'educational', projects), subtitle='Educational')
     readme += '---\n\n'
 
     # Stats
