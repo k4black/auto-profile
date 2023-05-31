@@ -1,6 +1,9 @@
 version: 0.0.1
 settings:
   include-github-stats: true
+  latex-cv-layout:
+    1-body: [experience, education]
+    1-sidebar: [summary, skills, publications, achievements, personal]
 
 
 bio:
@@ -12,6 +15,7 @@ bio:
   github: github.com/k4black
   website: k4black.github.io
   hireable: false
+
 
 summary:
   short: Passionate NLP Scientist with 4+ years of experience, love NLG and challenging tasks;
@@ -27,12 +31,8 @@ summary:
     - 📝 More: [linkedin.com/in/kdchernyshev](https://www.linkedin.com/in/kdchernyshev/) or [CV file](https://github.com/k4black/k4black/blob/main/Chernyshev_CV_anonimized.pdf).
 
 
-
 personal:
-  tags:
-    - Music Production
-    - Juggling
-    - Slackline
+  tags: [Music Production, Juggling, Slackline]
   summary: >
     Cheerful and sociable person, keen on slackline and juggling, 
     love music making creativity and strive to master the guitar.
@@ -105,80 +105,142 @@ skills:
       - name: Serbian
 
 
+achievements:
+  - Erasmus Mundus Scholarship 2022-2024
+  - Placed 2nd at Moscow State hackathon "Digital Transformation 2021"
+  - Honours Bachelor's degree in CS
+  - Largely improved Python course at YSDA
+
+
 publications:
-  - title: Publication 1
-    journal: Journal 1
-    url: URL to the publication
+  - title: "LCT-1 at SemEval-2023 Task 10: Pre-training and Multi-task Learning for Sexism Detection and Classification"
+    journal: ACL-2023 workshop
+    url: https://github.com/lct-rug-2022/edos-2023
     abstract: >
-      Brief description of the publication
+      Misogyny and sexism are growing problems in social media. 
+      Advances have been made in online sexism detection but the systems are often uninterpretable. 
+      SemEval-2023 Task 10 on Explainable Detection of Online Sexism aims at increasing 
+      explainability of the sexism detection, and our team participated in all the proposed subtasks. 
+      Our system is based on further domain-adaptive pre-training (Gururangan et al., 2020). 
+      Building on the Transformer-based models with the domain adaptation, we compare fine-tuning 
+      with multi-task learning and show that each subtask requires a different system configuration.
+      In our experiments, multi-task learning performs on par with standard fine-tuning for sexism 
+      detection and noticeably better for coarse-grained sexism classification, while fine-tuning is 
+      preferable for fine-grained classification.
 
 
 experience:
-  - role: Software Engineer
-    company: ABC Corp
-    url: https://www.abc.com
-    start: Aug 2019
+  - role: Python Course Manager, Lecturer
+    company: Yandex School of Data Analysis
+    url: https://academy.yandex.com/dataschool/
+    start: Jan 2021
     end: Present
     description:
-      - A description of your role
-      - Another description
-      - Another description
+      - Managed a team of 9 people: planning, review, tech supervision
+      - Lectures on topics: ‘Packages and Modules’, ‘C-bindings’
+      - Improved assignments checking system (e.g 6x acceleration)
+    tags: [Management, Python, Teaching, Docker, PyTest, Gitlab-CI, Github-Actions]
+
+  - role: Data Scientist
+    company: EPAM Systems
+    url: https://www.epam.com/
+    start: Jan 2022
+    end: Aug 2022
+    description:
+      - Made an unsupervised clustering model for support tickets, with time-related trends
+      - Tra an unsupervised clustering model for support tickets
+      - Developed a model and training pipeline for predicting the processing team based on ticket text; Saved ~9s per ticket, 100k t./year
+    tags: [Python, FastText, SkLearn, PyTorch, PyTest, Docker]
+
+  - role: Research Engineer, Project Manager
+    company: Gorky AI
+    url: https://gorky.ai/
+    start: Apr 2020
+    end: Jan 2022
+    description:
+      - Led projects of 2-4 developers, communicated with clients
+      - Improved teamwork (introduced Align flow, CI/CD, and code review)
+      - Adopted Voice Conversion model for Russian, close to real speech
+#      - Made unsupervised location recommendations for business
+#      - Developed month accurate covid-19 prediction model,  rough for several months
+      - Developed a highly-loaded ``roads quality'' model on phone data
+      - Designed architecture of scanned documents analysis project
+      - Trained a high mAP (~0.94) CV model for tables, pics, and stamps
+    tags: [Python, PyTorch-Lightning, Huggingface, SkLearn, PyTest, ONNX, Docker, Gitlab-CI]
+
+  - role: Research Intern
+    company: Algorithms and Technologies for Networks Analysis Lab
+    url: https://nnov.hse.ru/en/latna/
+    start: Apr 2019
+    end: Jan 2021
+    description:
+      - | 
+        Did research on "Compressed sensing" with l1 and l0 norm;
+        Developed near-SoTA recovery algorithm with faster convergence
+      - Developed abstractive summarization model using knowledge graphs
+    tags: [Statistics, Python, Huggingface, CoreNLP, SkLearn, SciPy]
+
 
 education:
-  - degree: Bachelor's in Computer Science
-    institution: University XYZ
-    start: Sep 2018
-    end: Aug 2022
+  - degree: Master of Arts
+    institution: EM "Language & Communication Technologies"
+    url: https://lct-master.org/
+    start: Sep 2022
+    end: Present
+    description: |
+      Double Degree: University of Groningen, Netherlands & Saarland University, Germany;
+      GPA: 8.2/10 (ongoing); + TA at Language Technology Project.
+
+  - degree: Graduate student -- two-year program
+    institution: Yandex School of Data Analysis, Russia
+    url: https://academy.yandex.com/dataschool/
+    start: Sep 2019
+    end: Jul 2021
+    description: |
+      GPA: 8.9/10; + TA at Python Course.
+
+  - degree: Bachelor of Science
+    institution: Higher School of Economics, Russia
+    url: https://hse.ru/en/
+    start: Sep 2017
+    end: Jul 2021
+    honors: Cum Laude
+    description: |
+      GPA: 9.1/10; + TA at Algorithms and Data Structures.
 
 
 certificates:
   - DL Optimization and Deployment using TensorFlow and TensorRT
+#  - AI Workflows for Intelligent Video Analytics with DeepStream using TF and TRT
   - Fundamentals of Accelerated Computing with CUDA Python
   - Intel Delta Courses (Delta 9, Delta 11)
 
 
 projects:
-  - name: EDOS 2023
+  - name: EDOS-2023
     description: Public repository for the EDOS 2023 submission by LCT-1 team utilising multitasking approach;
     url: https://github.com/lct-rug-2022/edos-2023
     year: 2023
     type: educational
-    tags:
-      - transformers
-      - machamp
-      - multitasking
-      - python
-      - dvc
+    tags: [HuggingFace, MaChAmp, multitasking, Python, DVC]
 
   - name: auto-profile
     description: Small project to auto generate github profile, personal website and latex cv using single yaml file;
     url: https://github.com/k4black/auto-profile
     type: personal
     year: 2023
-    tags:
-      - python
-      - latex
-      - github-actions
-      - tba
+    tags: [Python, LaTeX, GitHub-Actions, TBA]
 
   - name: fastapi-jwt
     description: FastAPI-native extension for JWT Auth;
     url: https://github.com/k4black/fastapi-jwt
     type: open-source
     year: 2021
-    tags:
-      - jwt
-      - python
-      - fastapi
-      - pytest
+    tags: [JWT, Python, FastAPI, PyTest]
 
   - name: Manytask
     description: Auto assignments testing system for YSDA;
     url: https://github.com/yandexdataschool/manytask
     type: open-source
     year: 2022
-    tags:
-      - testing
-      - python
-      - flask
-      - pytest
+    tags: [Teaching, Testing, Python, Flask, PyTest]
