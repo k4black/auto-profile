@@ -22,5 +22,5 @@ pip install -r requirements.txt
 
 ### Github profile 
 ```shell
-python github-profile/update_readme_from_yml.py --data=user-data.yml --output=./build/README.md
+python github-profile/generate_readme.py --data=user-data.yml --output=./build/README.md
 ```

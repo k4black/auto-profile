@@ -33,8 +33,8 @@ jobs:
 
       - name: Create github profile Readme
         run: |
-          python github-profile/update_readme_from_yml.py --data=user-data.yml --output=build/github-profile/README.md
-      - name: Update github bio
+          python github-profile/generate_readme.py --data=user-data.yml --output=build/github-profile/README.md
+      - name: Update github bio using api
         run: |
           python github-profile/update_github_bio.py --data=user-data.yml --api-token=${{ secrets.PAT }}
       - name: Push github profile files
