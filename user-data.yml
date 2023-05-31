@@ -216,28 +216,28 @@ certificates:
 
 projects:
   - name: EDOS-2023
-    description: Public repo for Sexism Detection Shared Task (EDOS 2023) by LCT-1 team utilising multitasking approach;
+    description: Public repo for Sexism Detection Shared Task (EDOS 2023) by LCT-1 team utilising multitasking approach
     url: https://github.com/lct-rug-2022/edos-2023
     year: 2023
     type: educational
     tags: [HuggingFace, MaChAmp, multitasking, Python, DVC]
 
   - name: auto-profile
-    description: Small project to auto generate github profile, personal website and latex cv using single yaml file;
+    description: Small project to auto generate github profile, personal website and latex cv using single yaml file
     url: https://github.com/k4black/auto-profile
     type: personal
     year: 2023
     tags: [Python, LaTeX, GitHub-Actions, TBA]
 
   - name: fastapi-jwt
-    description: FastAPI-native extension for JWT Auth;
+    description: FastAPI-native extension for JWT Auth
     url: https://github.com/k4black/fastapi-jwt
     type: open-source
     year: 2021
     tags: [JWT, Python, FastAPI, PyTest]
 
   - name: Manytask
-    description: Auto assignments testing system for YSDA;
+    description: Auto assignments testing system for YSDA
     url: https://github.com/yandexdataschool/manytask
     type: open-source
     year: 2022
