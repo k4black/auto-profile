@@ -109,13 +109,15 @@ achievements:
   - Erasmus Mundus Scholarship 2022-2024
   - Placed 2nd at Moscow State hackathon "Digital Transformation 2021"
   - Honours Bachelor's degree in CS
-  - Largely improved Python course at YSDA
+  - Largely improved Python course at YSDA, top-1 course by students' rating
 
 
 publications:
   - title: "LCT-1 at SemEval-2023 Task 10: Pre-training and Multi-task Learning for Sexism Detection and Classification"
     journal: ACL-2023 workshop
     url: https://github.com/lct-rug-2022/edos-2023
+    year: 2023
+    authors: [K.Chernyshev, E.Garanina, D.bayram, Q.Zheng]
     abstract: >
       Misogyny and sexism are growing problems in social media. 
       Advances have been made in online sexism detection but the systems are often uninterpretable. 
@@ -136,9 +138,9 @@ experience:
     start: Jan 2021
     end: Present
     description:
-      - Managed a team of 9 people: planning, review, tech supervision
-      - Lectures on topics: ‘Packages and Modules’, ‘C-bindings’
-      - Improved assignments checking system (e.g 6x acceleration)
+      - Managed a team of 9 people, planning, review, tech supervision
+      - Conducted lectures on 'Packages and Modules', 'C-bindings'
+      - Boosted assignment-checking system (e.g 6x acceleration)
     tags: [Management, Python, Teaching, Docker, PyTest, Gitlab-CI, Github-Actions]
 
   - role: Data Scientist
@@ -147,9 +149,8 @@ experience:
     start: Jan 2022
     end: Aug 2022
     description:
-      - Made an unsupervised clustering model for support tickets, with time-related trends
-      - Tra an unsupervised clustering model for support tickets
-      - Developed a model and training pipeline for predicting the processing team based on ticket text; Saved ~9s per ticket, 100k t./year
+      - Trained an unsupervised model for support ticket trends over time
+      - Implemented a predictive model, improving ticket processing efficiency by ~10s seconds per ticket (~15% annual efficiency increase)
     tags: [Python, FastText, SkLearn, PyTorch, PyTest, Docker]
 
   - role: Research Engineer, Project Manager
@@ -158,14 +159,13 @@ experience:
     start: Apr 2020
     end: Jan 2022
     description:
-      - Led projects of 2-4 developers, communicated with clients
-      - Improved teamwork (introduced Align flow, CI/CD, and code review)
-      - Adopted Voice Conversion model for Russian, close to real speech
+      - Managed 2-4 developers per project, liaising with clients
+      - Introduced Align flow, CI/CD, and code reviews, improved teamwork
+      - Adapted Voice Conversion model for Russian, close to real speech
 #      - Made unsupervised location recommendations for business
 #      - Developed month accurate covid-19 prediction model,  rough for several months
-      - Developed a highly-loaded ``roads quality'' model on phone data
-      - Designed architecture of scanned documents analysis project
-      - Trained a high mAP (~0.94) CV model for tables, pics, and stamps
+      - Developed a highly-loaded 'roads quality' model on mobile data
+      - Designed and developed a solution for scanned document analysis, trained a high mAP (~0.94) CV model for tables, pics, and stamps
     tags: [Python, PyTorch-Lightning, Huggingface, SkLearn, PyTest, ONNX, Docker, Gitlab-CI]
 
   - role: Research Intern
@@ -174,10 +174,8 @@ experience:
     start: Apr 2019
     end: Jan 2021
     description:
-      - | 
-        Did research on "Compressed sensing" with l1 and l0 norm;
-        Developed near-SoTA recovery algorithm with faster convergence
-      - Developed abstractive summarization model using knowledge graphs
+      - Conducted research on 'Compressed Sensing' with l1 and l0 norms, resulting in a near SoTA recovery algorithm with faster convergence
+      - Created abstractive summarization model using knowledge graphs
     tags: [Statistics, Python, Huggingface, CoreNLP, SkLearn, SciPy]
 
 
@@ -218,7 +216,7 @@ certificates:
 
 projects:
   - name: EDOS-2023
-    description: Public repository for the EDOS 2023 submission by LCT-1 team utilising multitasking approach;
+    description: Public repo for Sexism Detection Shared Task (EDOS 2023) by LCT-1 team utilising multitasking approach;
     url: https://github.com/lct-rug-2022/edos-2023
     year: 2023
     type: educational
