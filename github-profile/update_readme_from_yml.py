@@ -47,7 +47,7 @@ def _get_projects_table(
         subtitle: str,
 ) -> str:
     table = ''
-    table += f'| {subtitle} | | |\n'
+    table += f'| **{subtitle}:** | | |\n'
     for project in projects:
         table += f'| [{project["name"]}]({project["url"]}) *({project["year"]})* | {project["description"]} | {" ".join(_get_shield(tag, color="f3f3ff") for tag in project["tags"])} |\n'
     return table
@@ -92,7 +92,6 @@ def get_readme(
 
     # Projects
     readme += '### 📦 Projects\n'
-    readme += '#### Personal\n'
     readme += '| Project | Description | Stack |\n'
     readme += '| --- | --- | --- |\n'
     readme += _get_projects_table(filter(lambda p: p['type'] == 'personal', projects), subtitle='Personal')
