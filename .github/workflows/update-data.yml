@@ -31,18 +31,34 @@ jobs:
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
 
-      - name: Create github profile Readme
+      - name: Generate github profile Readme
         run: |
           python github-profile/generate_readme.py --data=user-data.yml --output=build/github-profile/README.md
       - name: Update github bio using api
         run: |
           python github-profile/update_github_bio.py --data=user-data.yml --api-token=${{ secrets.PAT }}
+
+      # TODO: load bib configs?
+      - name: Download latex style file and Generate CV tex file
+        run: |
+          wget https://raw.githubusercontent.com/k4black/cv-template/main/altacv.cls -O build/latex-cv/style.cls
+          wget https://raw.githubusercontent.com/k4black/cv-template/main/pubs-authoryear.cfg -O build/latex-cv/pubs-authoryear.cfg
+          wget https://raw.githubusercontent.com/k4black/cv-template/main/pubs-num.cfg -O build/latex-cv/pubs-num.cfg
+          cp -r latex-cv/. build/latex-cv
+          python latex-cv/generate_tex.py --data=user-data.yml --output=build/latex-cv/cv.tex
+      - name: Generate CV pdf file
+        uses: xu-cheng/latex-action@v2
+        with:
+          working_directory: build/latex-cv
+          root_file: cv.tex
+
       - name: Push github profile files
         run: |
           git clone https://x-access-token:${{ secrets.PAT }}@github.com/k4black/k4black.git remote/github-profile
           cp -r build/github-profile/. remote/github-profile
+          cp -r build/latex-cv/cv.pdf remote/github-profile/chernyshev_cv.pdf
           cd remote/github-profile
-          git add README.md
+          git add README.md chernyshev_cv.pdf
           if ! git diff-index --quiet HEAD; then
             git commit -m "Update from auto-profile repo"
             git push --force

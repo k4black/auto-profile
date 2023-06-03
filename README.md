@@ -4,8 +4,9 @@ Auto update of personal website, github profile and compile latex cv
 On `user-data.yml` file update the pipeline will be triggered. The pipeline will:
 - Update personal github page [github.com/k4black](https://github.com/k4black)
 - [TBA] Update personal website [k4black.github.io](https://k4black.github.io)
-- [TBA] Compile latex cv and upload it to both website and profile
+- Compile latex cv and upload it to both website and profile
 
+For generating the `md` and `tex` files the `jinja2` is used.
 
 ## Setup
 
@@ -23,4 +24,10 @@ pip install -r requirements.txt
 ### Github profile 
 ```shell
 python github-profile/generate_readme.py --data=user-data.yml --output=./build/README.md
+```
+
+### Latex CV
+```shell
+python github-profile/generate_tex.py --data=user-data.yml --output=./build/latex-cv/cv.tex
+pdflatex build/latex-cv/cv.tex
 ```
