@@ -52,11 +52,7 @@ jobs:
           working_directory: build/latex-cv
           root_file: cv.tex
           continue_on_error: true
-        env:
-          TEXINPUTS: ".:./latex-cv/:"
-        args:
-            latexmk -pdf -interaction=nonstopmode -file-line-error -shell-escape -f
-
+          latexmk_use_lualatex: true
       - name: Push CV pdf to github
         uses: actions/upload-artifact@v3
         with:
