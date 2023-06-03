@@ -49,6 +49,7 @@ jobs:
           ls -lah build/latex-cv
       - name: Generate CV pdf file
         uses: xu-cheng/latex-action@v2
+        continue-on-error: true
         with:
           working_directory: build/latex-cv
           root_file: cv.tex
