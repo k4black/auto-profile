@@ -45,6 +45,7 @@ jobs:
           wget https://raw.githubusercontent.com/k4black/cv-template/main/pubs-authoryear.cfg -O build/latex-cv/pubs-authoryear.cfg
           wget https://raw.githubusercontent.com/k4black/cv-template/main/pubs-num.cfg -O build/latex-cv/pubs-num.cfg
           cp -r latex-cv/. build/latex-cv
+          ls -alh build/latex-cv
           python latex-cv/generate_tex.py --data=user-data.yml --output=build/latex-cv/cv.tex
       - name: Generate CV pdf file
         uses: xu-cheng/latex-action@v2
