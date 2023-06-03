@@ -53,7 +53,7 @@ jobs:
           root_file: cv.tex
           continue_on_error: true
         env:
-          TEXINPUTS: ".:./latex-cv/:$TEXINPUTS"
+          TEXINPUTS: ".:./latex-cv/:"
       - name: Push CV pdf to github
         uses: actions/upload-artifact@v3
         with:
