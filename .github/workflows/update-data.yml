@@ -54,6 +54,7 @@ jobs:
           root_file: cv.tex
           continue_on_error: true
           args: >
+            -pdf
             -shell-escape
             -interaction=nonstopmode
             -file-line-error
