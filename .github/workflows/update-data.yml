@@ -51,6 +51,7 @@ jobs:
         with:
           working_directory: build/latex-cv
           root_file: cv.tex
+          continue_on_error: true
       - name: Push CV pdf to github
         uses: actions/upload-artifact@v3
         with:
