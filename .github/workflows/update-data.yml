@@ -8,7 +8,7 @@ on:
 
 
 jobs:
-  update-github-profile:
+  update:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout this repository
@@ -38,10 +38,10 @@ jobs:
         run: |
           python github-profile/update_github_bio.py --data=user-data.yml --api-token=${{ secrets.PAT }}
 
-      # TODO: load bib configs?
       - name: Download latex style file and Generate CV tex file
         run: |
-          wget https://raw.githubusercontent.com/k4black/cv-template/main/altacv.cls -O build/latex-cv/style.cls
+          mkdir -p build/latex-cv
+          wget https://raw.githubusercontent.com/k4black/cv-template/main/altacv.cls -O build/latex-cv/altacv.cls
           wget https://raw.githubusercontent.com/k4black/cv-template/main/pubs-authoryear.cfg -O build/latex-cv/pubs-authoryear.cfg
           wget https://raw.githubusercontent.com/k4black/cv-template/main/pubs-num.cfg -O build/latex-cv/pubs-num.cfg
           cp -r latex-cv/. build/latex-cv
@@ -51,7 +51,11 @@ jobs:
         with:
           working_directory: build/latex-cv
           root_file: cv.tex
-
+      - name: Push CV pdf to github
+        uses: actions/upload-artifact@v3
+        with:
+          name: cv
+          path: build/latex-cv/cv.pdf
       - name: Push github profile files
         run: |
           git clone https://x-access-token:${{ secrets.PAT }}@github.com/k4black/k4black.git remote/github-profile
