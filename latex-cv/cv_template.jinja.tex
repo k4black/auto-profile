@@ -159,8 +159,8 @@
     \cvsection{Experience}
     (# for experience in experience_list #)
         \cvevent
-            { (( experience.role )) }
-            { \ihref{ (( experience.url )) }{ (( _process_text_to_latex(experience.company) )) } }
+            {(( experience.role ))}
+            {\ihref{(( experience.url ))}{(( _process_text_to_latex(experience.company) ))}}
             {(( experience.start )) --\,(( experience.end ))}
             {(( experience.location ))}%
         \cvbox[\linewidth]{%
@@ -178,8 +178,8 @@
     \cvsection{Education}
     (# for education in education_list #)
         \cvevent
-            { (( education.degree )) }
-            { \ihref{ (( education.url )) }{ (( _process_text_to_latex(education.institution) )) } }
+            {(( education.degree ))}
+            {\ihref{(( education.url ))}{(( _process_text_to_latex(education.institution) ))}}
             {(( education.start )) --\,(( education.end ))}
             {(( education.location ))}%
         \cvbox[\linewidth]{(( _process_text_to_latex(education.description) ))}\hfill\par%%

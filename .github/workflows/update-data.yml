@@ -38,7 +38,7 @@ jobs:
         run: |
           python github-profile/update_github_bio.py --data=user-data.yml --api-token=${{ secrets.PAT }}
 
-      - name: Download latex style file and Generate CV tex file
+      - name: Download latex style files and Generate CV tex file
         run: |
           mkdir -p build/latex-cv
           wget https://raw.githubusercontent.com/k4black/cv-template/main/altacv.cls -O build/latex-cv/altacv.cls
@@ -46,13 +46,17 @@ jobs:
           wget https://raw.githubusercontent.com/k4black/cv-template/main/pubs-num.cfg -O build/latex-cv/pubs-num.cfg
           cp -r latex-cv/. build/latex-cv
           python latex-cv/generate_tex.py --data=user-data.yml --output=build/latex-cv/cv.tex
+          ls -lah build/latex-cv
       - name: Generate CV pdf file
-        uses: xu-cheng/latex-action@v2
+        uses: xu-cheng/latex-action@v2.8
         with:
           working_directory: build/latex-cv
           root_file: cv.tex
           continue_on_error: true
-          latexmk_use_lualatex: true
+          args: >
+            -shell-escape
+            -interaction=nonstopmode
+            -file-line-error
       - name: Push CV pdf to github
         uses: actions/upload-artifact@v3
         with:
