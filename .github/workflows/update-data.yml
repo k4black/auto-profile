@@ -54,6 +54,9 @@ jobs:
           continue_on_error: true
         env:
           TEXINPUTS: ".:./latex-cv/:"
+        args:
+            latexmk -pdf -interaction=nonstopmode -file-line-error -shell-escape -f
+
       - name: Push CV pdf to github
         uses: actions/upload-artifact@v3
         with:
