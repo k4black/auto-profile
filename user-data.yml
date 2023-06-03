@@ -134,6 +134,16 @@ publications:
 
 
 experience:
+#  - role: NLP Intern
+#    company: JetBrains Research
+#    location: Netherlands
+#    url: https://www.jetbrains.com/research/
+#    start: Jun 2023
+#    end: Present
+#    description:
+#      - TBA;
+#    tags: [Python, PyTorch, HuggingFace, TBA]
+
   - role: Python Course Manager, Lecturer
     company: Yandex School of Data Analysis
     location: Russia
