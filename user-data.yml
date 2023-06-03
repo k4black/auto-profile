@@ -1,9 +1,11 @@
 version: 0.0.1
 settings:
+  name: k4black/auto-profile
+  url: https://github.com/k4black/auto-profile
   include-github-stats: true
-  latex-cv-layout:
-    1-body: [experience, education]
-    1-sidebar: [summary, skills, publications, achievements, personal]
+#  latex-cv-layout:
+#    body: [experience, education]
+#    sidebar: [summary, skills, publications, achievements, personal]
 
 
 bio:
@@ -18,9 +20,9 @@ bio:
 
 
 summary:
-  short: Passionate NLP Scientist with 4+ years of experience, love NLG and challenging tasks;
+  short: Passionate NLP Scientist with 4+ years of experience, love NLG and arduous tasks;
   long: >
-    HSE, Russia graduate (BaSc with Honors) Erasmus Mundus LCT MsA till 2024. 
+    HSE, Russia graduate (BaSc with Honors), Erasmus Mundus LCT MsA till 2024. 
     Has 5+ years of programming experience, 4+ years of Data Science Research experience. 
     Employed in Startups, Yandex DS School, EPAM, finished 8+ ML research projects.
   github_profile: |
@@ -62,7 +64,7 @@ skills:
         level: 3
       - name: PyTorch
         level: 3
-      - name: sklearn
+      - name: SkLearn
         level: 3
       - name: Tensorflow
         level: 1
@@ -106,15 +108,15 @@ skills:
 
 
 achievements:
-  - Erasmus Mundus Scholarship 2022-2024
-  - Placed 2nd at Moscow State hackathon "Digital Transformation 2021"
-  - Honours Bachelor's degree in CS
-  - Largely improved Python course at YSDA, top-1 course by students' rating
+  - Erasmus Mundus Scholarship 2022-2024;
+  - Placed 2nd at Moscow State hackathon "Digital Transformation 2021";
+  - Honours Bachelor's degree in CS;
+  - Largely improved Python course at YSDA, top-1 course by students' rating.
 
 
 publications:
   - title: "LCT-1 at SemEval-2023 Task 10: Pre-training and Multi-task Learning for Sexism Detection and Classification"
-    journal: ACL-2023 workshop
+    venue: ACL-2023 workshop
     url: https://github.com/lct-rug-2022/edos-2023
     year: 2023
     authors: [K.Chernyshev, E.Garanina, D.bayram, Q.Zheng]
@@ -134,63 +136,69 @@ publications:
 experience:
   - role: Python Course Manager, Lecturer
     company: Yandex School of Data Analysis
+    location: Russia
     url: https://academy.yandex.com/dataschool/
     start: Jan 2021
     end: Present
     description:
-      - Managed a team of 9 people, planning, review, tech supervision
-      - Conducted lectures on 'Packages and Modules', 'C-bindings'
-      - Boosted assignment-checking system (e.g 6x acceleration)
+      - Managed a team of 9 people, planning, review, tech supervision;
+      - Conducted lectures on 'Packages and Modules', 'C-bindings';
+      - Boosted assignment-checking system (e.g 6x acceleration).
     tags: [Management, Python, Teaching, Docker, PyTest, Gitlab-CI, Github-Actions]
 
   - role: Data Scientist
     company: EPAM Systems
+    location: Serbia
     url: https://www.epam.com/
     start: Jan 2022
     end: Aug 2022
     description:
-      - Trained an unsupervised model for support ticket trends over time
-      - Implemented a predictive model, improving ticket processing efficiency by ~10s seconds per ticket (~15% annual efficiency increase)
+      - Trained an unsupervised model for support ticket trends over time;
+      - Implemented a processing team predictive model, improving ticket processing efficiency by ~10s seconds per ticket for 100k t./year.
     tags: [Python, FastText, SkLearn, PyTorch, PyTest, Docker]
 
   - role: Research Engineer, Project Manager
     company: Gorky AI
+    location: Russia
     url: https://gorky.ai/
     start: Apr 2020
     end: Jan 2022
     description:
-      - Managed 2-4 developers per project, liaising with clients
-      - Introduced Align flow, CI/CD, and code reviews, improved teamwork
-      - Adapted Voice Conversion model for Russian, close to real speech
-#      - Made unsupervised location recommendations for business
-#      - Developed month accurate covid-19 prediction model,  rough for several months
-      - Developed a highly-loaded 'roads quality' model on mobile data
-      - Designed and developed a solution for scanned document analysis, trained a high mAP (~0.94) CV model for tables, pics, and stamps
-    tags: [Python, PyTorch-Lightning, Huggingface, SkLearn, PyTest, ONNX, Docker, Gitlab-CI]
+      - Managed 2-4 developers per project, liaising with clients;
+      - Introduced Align flow, CI/CD, code reviews, improved teamwork;
+      - Adapted Voice Conversion model for Russian, close to real speech;
+#      - Made unsupervised location recommendations for business;
+#      - Developed month accurate covid-19 prediction model,  rough for several months;
+      - Developed a highly-loaded 'roads quality' model on mobile data;
+      - Designed and developed a solution for scanned document analysis, trained a high mAP (~0.94) CV model for tables, pics, and stamps.
+    tags: [Python, PyTorch, HuggingFace, SkLearn, PyTest, ONNX, Docker, Gitlab-CI]
 
   - role: Research Intern
-    company: Algorithms and Technologies for Networks Analysis Lab
+    company: LATNA Lab at Higher School of Economics
+    location: Russia
     url: https://nnov.hse.ru/en/latna/
     start: Apr 2019
     end: Jan 2021
     description:
-      - Conducted research on 'Compressed Sensing' with l1 and l0 norms, resulting in a near SoTA recovery algorithm with faster convergence
-      - Created abstractive summarization model using knowledge graphs
-    tags: [Statistics, Python, Huggingface, CoreNLP, SkLearn, SciPy]
+      - Conducted research on Compressed Sensing with l1 and l0 norms, resulting in a near SoTA recovery algorithm with faster convergence;
+      - Created abstractive summarization model using knowledge graphs.
+    tags: [Statistics, Python, HuggingFace, CoreNLP, SkLearn, SciPy]
 
 
 education:
   - degree: Master of Arts
     institution: EM "Language & Communication Technologies"
+    location: EU
     url: https://lct-master.org/
     start: Sep 2022
     end: Present
     description: |
-      Double Degree: University of Groningen, Netherlands & Saarland University, Germany;
+      Join Degree: University of Groningen & Saarland University;
       GPA: 8.2/10 (ongoing); + TA at Language Technology Project.
 
   - degree: Graduate student -- two-year program
-    institution: Yandex School of Data Analysis, Russia
+    institution: Yandex School of Data Analysis
+    location: Russia
     url: https://academy.yandex.com/dataschool/
     start: Sep 2019
     end: Jul 2021
@@ -198,7 +206,8 @@ education:
       GPA: 8.9/10; + TA at Python Course.
 
   - degree: Bachelor of Science
-    institution: Higher School of Economics, Russia
+    institution: Higher School of Economics
+    location: Russia
     url: https://hse.ru/en/
     start: Sep 2017
     end: Jul 2021
@@ -208,36 +217,36 @@ education:
 
 
 certificates:
-  - DL Optimization and Deployment using TensorFlow and TensorRT
-#  - AI Workflows for Intelligent Video Analytics with DeepStream using TF and TRT
-  - Fundamentals of Accelerated Computing with CUDA Python
-  - Intel Delta Courses (Delta 9, Delta 11)
+  - DL Optimization and Deployment using TensorFlow and TensorRT;
+#  - AI Workflows for Intelligent Video Analytics with DeepStream using TF and TRT;
+  - Fundamentals of Accelerated Computing with CUDA Python;
+  - Intel Delta Courses (Delta 9, Delta 11).
 
 
 projects:
   - name: EDOS-2023
-    description: Public repo for Sexism Detection Shared Task (EDOS 2023) by LCT-1 team utilising multitasking approach
+    description: Public repo for Sexism Detection Shared Task (EDOS 2023) by LCT-1 team utilising multitasking approach;
     url: https://github.com/lct-rug-2022/edos-2023
     year: 2023
     type: educational
     tags: [HuggingFace, MaChAmp, multitasking, Python, DVC]
 
   - name: auto-profile
-    description: Small project to auto generate github profile, personal website and latex cv using single yaml file
+    description: Small project to auto generate github profile, personal website and latex cv using single yaml file;
     url: https://github.com/k4black/auto-profile
     type: personal
     year: 2023
-    tags: [Python, LaTeX, GitHub-Actions, TBA]
+    tags: [Python, LaTeX, markdown, jinja2, GitHub-Actions]
 
   - name: fastapi-jwt
-    description: FastAPI-native extension for JWT Auth
+    description: FastAPI-native extension for JWT Auth;
     url: https://github.com/k4black/fastapi-jwt
     type: open-source
     year: 2021
     tags: [JWT, Python, FastAPI, PyTest]
 
   - name: Manytask
-    description: Auto assignments testing system for YSDA
+    description: Auto assignments testing system for YSDA;
     url: https://github.com/yandexdataschool/manytask
     type: open-source
     year: 2022

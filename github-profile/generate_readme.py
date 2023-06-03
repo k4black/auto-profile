@@ -12,8 +12,8 @@ REPO_ROOT = FILE_FOLDER.parent
 
 def main(
         data: Path = REPO_ROOT / 'user-data.yml',
-        output: Path = REPO_ROOT / 'build' / 'GITHUB_PROFILE_README.md',
-        template: Path = FILE_FOLDER / 'readme_template.md.jinja',
+        output: Path = REPO_ROOT / 'build' / 'github-profile' / 'GITHUB_PROFILE_README.md',
+        template: Path = FILE_FOLDER / 'readme_template.jinja.md',
 ) -> None:
     """Generate Github Profile README from user data YAML file"""
     # load yaml data

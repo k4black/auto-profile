@@ -33,7 +33,7 @@
 {%- macro render_projects(projects,type) %}
    {%- for project in projects -%}
       {%- if project.type == type %}
-| [{{ project.name }}]({{ project.url }}) {% if project.year %}*({{ project.year }})*{% endif %} | {{ project.description }}; | {% for tag in project.tags %} {{ render_shield(tag,"","f3f3ff","") }} {% endfor %} |
+| [{{ project.name }}]({{ project.url }}) {% if project.year %}*({{ project.year }})*{% endif %} | {{ project.description }} | {% for tag in project.tags %} {{ render_shield(tag,"","f3f3ff","") }} {% endfor %} |
       {%- endif %}
    {%- endfor -%}
 {%- endmacro %}
