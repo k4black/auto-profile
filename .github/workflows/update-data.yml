@@ -59,7 +59,7 @@ jobs:
             -shell-escape
             -interaction=nonstopmode
             -file-line-error
-      - name: Push CV pdf to github
+      - name: Create CV artifact
         uses: actions/upload-artifact@v3
         with:
           name: cv
