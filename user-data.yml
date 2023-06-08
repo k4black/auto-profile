@@ -261,3 +261,17 @@ projects:
     type: open-source
     year: 2022
     tags: [Teaching, Testing, Python, Flask, PyTest]
+
+  - name: Fact Aware Abstractive Summarization model
+    description: Bachelor thesis project, abstractive summarization model using knowledge graphs - adding additional attention CNN graph encoder for PEGASUS model;
+    url: https://github.com/k4black/sum
+    type: personal
+    year: 2018
+    tags: [PyTorch, NLP, Summarization, Python]
+
+  - name: multi-label-image-classification
+    description: Old project for Intel Delta 9 Course final competition - multi label image classification with Inception v3;
+    url: https://github.com/k4black/Multi-Label-Image-Classification
+    type: personal
+    year: 2018
+    tags: [TensorFlow, CV, Python]
