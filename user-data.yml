@@ -20,11 +20,12 @@ bio:
 
 
 summary:
+  tagline: NLP Data Scientist
   short: Passionate NLP Scientist with 4+ years of experience, love NLG and arduous tasks;
   long: >
-    HSE, Russia graduate (BaSc with Honors), Erasmus Mundus LCT MsA till 2024. 
-    Has 5+ years of programming experience, 4+ years of Data Science Research experience. 
-    Employed in Startups, Yandex DS School, EPAM, finished 8+ ML research projects.
+    HSE, Russia graduate BaSc with Honors, MsA Erasmus Mundus LCT till 2024. 
+    Has 5+ years of programming experience, 4+ years of Data Science Research experience:
+    Startups, Yandex DS School, EPAM, and JetBrains; finished 8+ ML research projects.
   github_profile: |
     - 💼 NLP Intern at [Jetbrains Research](https://www.jetbrains.com/research/);
     - 👨‍🏫 Lecturer and Python Course manager at the [Yandex School of Data Analysis](https://academy.yandex.com/dataschool/);
@@ -111,7 +112,7 @@ achievements:
   - Erasmus Mundus Scholarship 2022-2024;
   - Placed 2nd at Moscow State hackathon "Digital Transformation 2021";
   - Honours Bachelor's degree in CS;
-  - Largely improved Python course at YSDA, top-1 course by students' rating.
+  - Largely improved Python course at YSDA, top-1 by students' rating.
 
 
 publications:
@@ -134,15 +135,16 @@ publications:
 
 
 experience:
-#  - role: NLP Intern
-#    company: JetBrains Research
-#    location: Netherlands
-#    url: https://www.jetbrains.com/research/
-#    start: Jun 2023
-#    end: Present
-#    description:
-#      - TBA;
-#    tags: [Python, PyTorch, HuggingFace, TBA]
+  - role: NLP Intern
+    company: JetBrains Research
+    location: Netherlands
+    url: https://www.jetbrains.com/research/
+    start: Jun 2023
+    end: Present
+    description:
+      - Analysing Internal Representation of code generation models;
+      - To be updated.
+    tags: [Python, PyTorch, HuggingFace, RL, SkLearn, DataLore]
 
   - role: Python Course Manager, Lecturer
     company: Yandex School of Data Analysis
@@ -156,7 +158,7 @@ experience:
       - Boosted assignment-checking system (e.g 6x acceleration).
     tags: [Management, Python, Teaching, Docker, PyTest, Gitlab-CI, Github-Actions]
 
-  - role: Data Scientist
+  - role: NLP Data Scientist
     company: EPAM Systems
     location: Serbia
     url: https://www.epam.com/
@@ -176,7 +178,7 @@ experience:
     description:
       - Managed 2-4 developers per project, liaising with clients;
       - Introduced Align flow, CI/CD, code reviews, improved teamwork;
-      - Adapted Voice Conversion model for Russian, close to real speech;
+#      - Adapted Voice Conversion model for Russian, close to real speech;
 #      - Made unsupervised location recommendations for business;
 #      - Developed month accurate covid-19 prediction model,  rough for several months;
       - Developed a highly-loaded 'roads quality' model on mobile data;
@@ -191,22 +193,22 @@ experience:
     end: Jan 2021
     description:
       - Conducted research on Compressed Sensing with l1 and l0 norms, resulting in a near SoTA recovery algorithm with faster convergence;
-      - Created abstractive summarization model using knowledge graphs.
+      - Created Abstractive Summarization model using Knowledge Graphs.
     tags: [Statistics, Python, HuggingFace, CoreNLP, SkLearn, SciPy]
 
 
 education:
-  - degree: Master of Arts
-    institution: EM "Language & Communication Technologies"
-    location: EU
+  - degree: Master of Arts (NLP)
+    institution: Uni. of Groningen & Saarland Uni.
+    location: NL & DE
     url: https://lct-master.org/
     start: Sep 2022
     end: Present
     description: |
-      Join Degree: University of Groningen & Saarland University;
+      Erasmus Mundus "Language & Communication Technologies";
       GPA: 8.2/10 (ongoing); + TA at Language Technology Project.
 
-  - degree: Graduate student -- two-year program
+  - degree: Post Graduate 2-year Program (Data Science)
     institution: Yandex School of Data Analysis
     location: Russia
     url: https://academy.yandex.com/dataschool/
@@ -215,7 +217,7 @@ education:
     description: |
       GPA: 8.9/10; + TA at Python Course.
 
-  - degree: Bachelor of Science
+  - degree: Bachelor of Science (Applied Math and CS)
     institution: Higher School of Economics
     location: Russia
     url: https://hse.ru/en/
@@ -263,11 +265,11 @@ projects:
     tags: [Teaching, Testing, Python, Flask, PyTest]
 
   - name: Fact Aware Abstractive Summarization model
-    description: Bachelor thesis project, abstractive summarization model using knowledge graphs - adding additional attention CNN graph encoder for PEGASUS model;
+    description: Bachelor thesis project, Abstractive Summarization model using Knowledge Graphs - adding additional attention CNN graph encoder for PEGASUS model;
     url: https://github.com/k4black/sum
     type: personal
     year: 2018
-    tags: [PyTorch, NLP, Summarization, Python]
+    tags: [PyTorch, CoreNLP, FastText, Summarization, Python]
 
   - name: multi-label-image-classification
     description: Old project for Intel Delta 9 Course final competition - multi label image classification with Inception v3;

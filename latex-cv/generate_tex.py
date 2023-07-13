@@ -1,4 +1,3 @@
-import urllib.parse
 from pathlib import Path
 
 from jinja2 import Template
@@ -12,6 +11,7 @@ REPO_ROOT = FILE_FOLDER.parent
 
 def _process_text_to_latex(text: str) -> str:
     """Process text to be used in latex"""
+    # backup special symbols
     symbols_to_replace = {
         '&': r'\&',
         '%': r'\%',
@@ -33,6 +33,7 @@ def main(
         data: Path = REPO_ROOT / 'user-data.yml',
         output: Path = REPO_ROOT / 'build' / 'latex-cv' / 'cv.tex',
         template: Path = FILE_FOLDER / 'cv_template.jinja.tex',
+        anonymize: bool = False,
 ) -> None:
     """Generate CV tex file from user data YAML file"""
     # load yaml data
@@ -59,6 +60,7 @@ def main(
     with open(output, 'w') as f:
         f.write(jinja2_template.render(
             bio=data['bio'],
+            tagline=data['summary']['tagline'],
             short_summary=data['summary']['short'],
             summary=data['summary']['long'],
             experience_list=data['experience'],
@@ -73,6 +75,7 @@ def main(
             github_username=data['bio']['github'].split('/')[-1],
             project_name=data['settings']['name'],
             project_url=data['settings']['url'],
+            # TODO: anonymize cv
         ))
 
 

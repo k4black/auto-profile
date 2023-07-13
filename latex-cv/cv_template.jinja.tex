@@ -27,7 +27,9 @@
 \setlength{\footskip}{1.2em}
 
 %% new: for using \today
+%\RequirePackage{datetime2}
 \RequirePackage[en-US]{datetime2}
+\DTMlangsetup{showdayofmonth=false}
 
 
 
@@ -56,7 +58,7 @@
 \definecolor{Grey}{HTML}{505050}
 \definecolor{LightGrey}{HTML}{AAAAAA}
 \colorlet{name}{black}
-\colorlet{tagline}{SlateGrey}
+\colorlet{tagline}{LightAccent}
 \colorlet{heading}{Accent}
 \colorlet{headingrule}{Accent}
 \colorlet{subheading}{LightAccent}
@@ -99,7 +101,13 @@
 
 
   \name{(( bio.name ))}
-%  \tagline{Your Position or Tagline Here}
+  % Optional tagline
+  (#- if (( tagline )) #)
+    \tagline{(( tagline ))}
+  (#- endif #)
+
+
+
   %% You can add multiple photos on the left or right
   \photoR{2.8cm}{photo_spring_2023.jpeg}
   % \photoL{2.5cm}{Yacht_High,Suitcase_High}
@@ -109,8 +117,8 @@
     \email{(( bio.email ))}
   %  \phone{000-00-0000}
   %  \mailaddress{Åddrésş, Street, 00000 Cóuntry}
-    \location{(( bio.location ))}
-    \homepage{(( bio.website ))}
+%    \location{(( bio.location ))}
+%    \homepage{(( bio.website ))}
   %  \twitter{@twitterhandle}
     \linkedin{(( bio.linkedin ))}
     \github{(( bio.github ))}
@@ -159,10 +167,10 @@
     \cvsection{Experience}
     (# for experience in experience_list #)
         \cvevent
-            {(( experience.role ))}
+            {(( _process_text_to_latex(experience.role) ))}
             {\ihref{(( experience.url ))}{(( _process_text_to_latex(experience.company) ))}}
             {(( experience.start )) --\,(( experience.end ))}
-            {(( experience.location ))}%
+            {(( _process_text_to_latex(experience.location) ))}%
         \cvbox[\linewidth]{%
             \begin{itemize}
                 (#- for description in experience.description #)
@@ -178,28 +186,28 @@
     \cvsection{Education}
     (# for education in education_list #)
         \cvevent
-            {(( education.degree ))}
+            {(( _process_text_to_latex(education.degree) ))}
             {\ihref{(( education.url ))}{(( _process_text_to_latex(education.institution) ))}}
             {(( education.start )) --\,(( education.end ))}
-            {(( education.location ))}%
+            {(( _process_text_to_latex(education.location) ))}%
         \cvbox[\linewidth]{(( _process_text_to_latex(education.description) ))}\hfill\par%%
         \bigskip%
     (# endfor #)
 
-    \smallskip\divider%
-    \vspace{-0.6em} % TODO: fix
-
-    \cvevent
-        {Courses and Certificates}
-        {}
-        {}
-        {}%
-    \begin{itemize}
-        \setlength\itemsep{0em}
-        (#- for certificate in certificates_list #)
-            \item (( certificate ))
-        (#- endfor #)
-    \end{itemize}
+%    \smallskip\divider%
+%    \vspace{-0.6em} % TODO: fix
+%
+%    \cvevent
+%        {Courses and Certificates}
+%        {}
+%        {}
+%        {}%
+%    \begin{itemize}
+%        \setlength\itemsep{0em}
+%        (#- for certificate in certificates_list #)
+%            \item (( _process_text_to_latex(certificate) ))
+%        (#- endfor #)
+%    \end{itemize}
 
 
 %    % use ONLY \newpage if you want to force a page break for
@@ -228,10 +236,10 @@
     %% page if the content is too long.
     \switchcolumn
 
-    \vspace{-0.2em} % TODO: fix
+    \vspace{-0.1em} % TODO: fix
     \cvsection{Summary}
     \vspace{0.6em} % TODO: fix
-    \textbf{(( short_summary ))}\par%
+    \textbf{(( _process_text_to_latex(short_summary) ))}\par%
     \smallskip%
     (( summary ))
     \medskip
@@ -263,14 +271,16 @@
 
 
     \cvsection{Achievements}
+    \smallskip
     \begin{itemize}
         (#- for achievement in achievements_list #)
-            \item (( achievement ))
+            \item (( _process_text_to_latex(achievement) ))
         (#- endfor #)
     \end{itemize}
     \medskip
 
     \cvsection{Personal}
+    \smallskip
     ((personal_summary))\\
      (#- for tag in personal_tags_list #) \cvsmalltag{((tag))} (#- endfor #)
 
