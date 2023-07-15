@@ -236,6 +236,14 @@ certificates:
 
 
 projects:
+
+  - name: auto-profile
+    description: Unofficial CodeBLEU metrics implementation as the original does not provide pip package, macOS support and usable interface;
+    url: https://github.com/k4black/codebleu
+    type: personal
+    year: 2023
+    tags: [Python, Code, Code-Generation, CodeBLEU, PyPI, GitHub-Actions]
+
   - name: EDOS-2023
     description: Public repo for Sexism Detection Shared Task (EDOS 2023) by LCT-1 team utilising multitasking approach;
     url: https://github.com/lct-rug-2022/edos-2023
