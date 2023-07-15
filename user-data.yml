@@ -237,7 +237,7 @@ certificates:
 
 projects:
 
-  - name: auto-profile
+  - name: CodeBLEU
     description: Unofficial CodeBLEU metrics implementation as the original does not provide pip package, macOS support and usable interface;
     url: https://github.com/k4black/codebleu
     type: personal
