@@ -135,16 +135,16 @@ publications:
 
 
 experience:
-  - role: NLP Intern
-    company: JetBrains Research
-    location: Netherlands
-    url: https://www.jetbrains.com/research/
-    start: Jun 2023
-    end: Present
-    description:
-      - Analysing Internal Representation of code generation models;
-      - To be updated.
-    tags: [Python, PyTorch, HuggingFace, RL, SkLearn, DataLore]
+#  - role: NLP Intern
+#    company: JetBrains Research
+#    location: Netherlands
+#    url: https://www.jetbrains.com/research/
+#    start: Jun 2023
+#    end: Present
+#    description:
+#      - Analysing Internal Representation of code generation models;
+#      - To be updated.
+#    tags: [Python, PyTorch, HuggingFace, RL, SkLearn, DataLore]
 
   - role: Python Course Manager, Lecturer
     company: Yandex School of Data Analysis
