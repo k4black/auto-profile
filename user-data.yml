@@ -14,7 +14,9 @@ bio:
   email: kdchernyshev+job@gmail.com
   location: Groningen, Netherlands
   linkedin: linkedin.com/in/kdchernyshev
+  linkedin_name: kdchernyshev
   github: github.com/k4black
+  github_name: k4black
   website: k4black.github.io
   hireable: false
 
@@ -240,7 +242,7 @@ projects:
   - name: CodeBLEU
     description: Unofficial CodeBLEU metrics implementation as the original does not provide pip package, macOS support and usable interface;
     url: https://github.com/k4black/codebleu
-    type: personal
+    type: open-source
     year: 2023
     tags: [Python, Code, Code-Generation, CodeBLEU, PyPI, GitHub-Actions]
 
