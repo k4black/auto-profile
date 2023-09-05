@@ -12,7 +12,7 @@ bio:
   name: Konstantin Chernyshev
   informal: Konstantin
   email: kdchernyshev+job@gmail.com
-  location: Groningen, Netherlands
+  location: Saarbrücken, Germany
   linkedin: linkedin.com/in/kdchernyshev
   linkedin_name: kdchernyshev
   github: github.com/k4black
@@ -24,10 +24,11 @@ bio:
 summary:
   tagline: NLP Data Scientist
   short: Passionate NLP Scientist with 4+ years of experience, love NLG and arduous tasks;
-  long: >
-    HSE, Russia graduate BaSc with Honors, MsA Erasmus Mundus LCT till 2024. 
-    Has 5+ years of programming experience, 4+ years of Data Science Research experience:
-    Startups, Yandex DS School, EPAM, and JetBrains; finished 8+ ML research projects.
+  long:
+    - HSE, Russia graduate BaSc with Honors, MsA Erasmus Mundus LCT till 2024;
+    - 5+ years of programming experience;
+    - 4+ years of Data Science Research experience in Startups, Yandex DS School, EPAM, and JetBrains;
+    - Finished 8+ ML research projects.
   github_profile: |
     - 💼 NLP Intern at [Jetbrains Research](https://www.jetbrains.com/research/), former NLP Data Scientist at [EPAM Systems](https://www.epam.com/);
     - 👨‍🏫 Lecturer and Python Course manager at the [Yandex School of Data Analysis](https://academy.yandex.com/dataschool/);
@@ -208,7 +209,7 @@ education:
     end: Present
     description: |
       Erasmus Mundus "Language & Communication Technologies";
-      GPA: 8.2/10 (ongoing); + TA at Language Technology Project.
+      GPA: 8.2/10 (ongoing) +Assistant at Language Technology Project.
 
   - degree: Post Graduate 2-year Program (Data Science)
     institution: Yandex School of Data Analysis
@@ -217,7 +218,7 @@ education:
     start: Sep 2019
     end: Jul 2021
     description: |
-      GPA: 8.9/10; + TA at Python Course.
+      GPA: 8.9/10; +Assistant at Python Course.
 
   - degree: Bachelor of Science (Applied Math and CS)
     institution: Higher School of Economics
@@ -227,7 +228,7 @@ education:
     end: Jul 2021
     honors: Cum Laude
     description: |
-      GPA: 9.1/10; + TA at Algorithms and Data Structures.
+      GPA: 9.1/10; +Assistant at Algorithms and Data Structures.
 
 
 certificates:

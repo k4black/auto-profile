@@ -117,7 +117,7 @@
     \email{(( bio.email ))}
   %  \phone{000-00-0000}
   %  \mailaddress{Åddrésş, Street, 00000 Cóuntry}
-%    \location{(( bio.location ))}
+    \location{(( bio.location ))}
 %    \homepage{(( bio.website ))}
   %  \twitter{@twitterhandle}
     \linkedin{(( bio.linkedin_name ))}
@@ -240,8 +240,17 @@
     \cvsection{Summary}
     \vspace{0.6em} % TODO: fix
     \textbf{(( _process_text_to_latex(short_summary) ))}\par%
-    \smallskip%
-    (( summary ))
+%    \smallskip%
+%    (( summary ))
+    \vspace{-0.4em} % TODO: fix
+    \cvbox{
+        \begin{itemize}
+            \setlength\itemsep{0.2em}
+            (#- for summary_element in summary #)
+                \item (( _process_text_to_latex(summary_element) ))
+            (#- endfor #)
+        \end{itemize}
+    }%
     \medskip
 
     \cvsection{Skills}
