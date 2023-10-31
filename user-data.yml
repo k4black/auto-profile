@@ -269,11 +269,11 @@ projects:
     tags: [JWT, Python, FastAPI, PyTest]
 
   - name: Manytask
-    description: Auto assignments testing system for YSDA;
-    url: https://github.com/yandexdataschool/manytask
+    description: Auto students' assignments testing system /w gitlab integration;
+    url: https://github.com/manytask
     type: open-source
-    year: 2022
-    tags: [Teaching, Testing, Python, Flask, PyTest]
+    year: 2023
+    tags: [Teaching, Testing, Python, LiteStar, PyTest, GitHub-Actions, GitLab-CI]
 
   - name: Fact Aware Abstractive Summarization model
     description: Bachelor thesis project, Abstractive Summarization model using Knowledge Graphs - adding additional attention CNN graph encoder for PEGASUS model;
