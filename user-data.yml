@@ -23,16 +23,16 @@ bio:
 
 summary:
   tagline: NLP Data Scientist
-  short: Passionate NLP Scientist with 4+ years of experience, love NLG and arduous tasks;
+  short: Passionate NLP Scientist with 5+ years of experience, love NLG and arduous tasks;
   long:
     - HSE, Russia graduate BaSc with Honors, MsA Erasmus Mundus LCT till 2024;
-    - 5+ years of programming experience;
-    - 4+ years of Data Science Research experience in Startups, Yandex DS School, EPAM, and JetBrains;
+    - 6+ years of programming experience;
+    - 5+ years of Data Science Research experience in Startups, Yandex DS School, EPAM, and JetBrains;
     - Finished 8+ ML research projects.
   github_profile: |
-    - 💼 NLP Intern at [Jetbrains Research](https://www.jetbrains.com/research/), former NLP Data Scientist at [EPAM Systems](https://www.epam.com/);
+    - 📄 Erasmus Mundus **['Language & Communication Technologies'](https://lct-master.org/) student** at the University of Groningen and Saarland University;
+    - 💼 Former NLP Data Scientist at [EPAM Systems](https://www.epam.com/) and NLP Intern at [Jetbrains Research](https://www.jetbrains.com/research/);
     - 👨‍🏫 Lecturer and Python Course manager at the [Yandex School of Data Analysis](https://academy.yandex.com/dataschool/);
-    - 📄 **['Language & Communication Technologies'](https://lct-master.org/) Erasmus Mundus student** at the University of Groningen and Saarland University;
     - 💻 Interested in NLP, Interpretability, SP, as well as in efficient DL-models Inference;
     - 📝 More: [CV file](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/k4black/k4black/main/chernyshev_cv.pdf) or [linkedin.com/in/kdchernyshev](https://www.linkedin.com/in/kdchernyshev/) or mail me 😊. 
 
@@ -41,7 +41,7 @@ personal:
   tags: [Music Production, Juggling, Slackline]
   summary: >
     Cheerful and sociable person, keen on slackline and juggling, 
-    love music making creativity and strive to master the guitar.
+    love music making creativity and strive to master a guitar.
 
 
 skills:
@@ -261,13 +261,6 @@ projects:
     year: 2023
     tags: [Python, LaTeX, markdown, jinja2, GitHub-Actions]
 
-  - name: fastapi-jwt
-    description: FastAPI-native extension for JWT Auth;
-    url: https://github.com/k4black/fastapi-jwt
-    type: open-source
-    year: 2021
-    tags: [JWT, Python, FastAPI, PyTest]
-
   - name: Manytask
     description: Auto students' assignments testing system /w gitlab integration;
     url: https://github.com/manytask
@@ -275,10 +268,17 @@ projects:
     year: 2023
     tags: [Teaching, Testing, Python, LiteStar, PyTest, GitHub-Actions, GitLab-CI]
 
+  - name: fastapi-jwt
+    description: FastAPI-native extension for JWT Auth;
+    url: https://github.com/k4black/fastapi-jwt
+    type: open-source
+    year: 2021
+    tags: [JWT, Python, FastAPI, PyTest]
+
   - name: Fact Aware Abstractive Summarization model
     description: Bachelor thesis project, Abstractive Summarization model using Knowledge Graphs - adding additional attention CNN graph encoder for PEGASUS model;
     url: https://github.com/k4black/sum
-    type: personal
+    type: educational
     year: 2018
     tags: [PyTorch, CoreNLP, FastText, Summarization, Python]
 
