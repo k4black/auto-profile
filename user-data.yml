@@ -115,7 +115,8 @@ achievements:
   - Erasmus Mundus Scholarship 2022-2024;
   - Placed 2nd at Moscow State hackathon "Digital Transformation 2021";
   - Honours Bachelor's degree in CS;
-  - Largely improved Python course at YSDA, top-1 by students' rating.
+  - Largely improved Python course at YSDA, top-1 by students' rating;
+  - Accepted and Finished YSDA.
 
 
 publications:
@@ -169,7 +170,7 @@ experience:
     end: Aug 2022
     description:
       - Trained an unsupervised model for support ticket trends over time;
-      - Implemented a processing team predictive model, improving ticket processing efficiency by ~10s seconds per ticket for 100k t./year.
+      - Implemented a processing team predictive model, improving ticket processing efficiency by ~10s seconds per ticket for 100k tick./year.
     tags: [Python, FastText, SkLearn, PyTorch, PyTest, Docker]
 
   - role: Research Engineer, Project Manager
@@ -202,8 +203,8 @@ experience:
 
 education:
   - degree: Master of Arts (NLP)
-    institution: Uni. of Groningen & Saarland Uni.
-    location: NL & DE
+    institution: Groningen & Saarland Unis.
+    location: Netherlands & Germany
     url: https://lct-master.org/
     start: Sep 2022
     end: Present
@@ -218,6 +219,7 @@ education:
     start: Sep 2019
     end: Jul 2021
     description: |
+      Top Russian Data Science program with 3% acceptance rate;
       GPA: 8.9/10; +Assistant at Python Course.
 
   - degree: Bachelor of Science (Applied Math and CS)
