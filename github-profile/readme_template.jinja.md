@@ -40,12 +40,12 @@
 
 | Project | Description | Stack |
 | --- | --- | --- |
-| **Personal:** | | |
-{{- render_projects(projects_list,"personal") }}
 | **Open Source:** | | |
 {{- render_projects(projects_list,"open-source") }}
 | **Educational:** | | |
 {{- render_projects(projects_list,"educational") }}
+| **Personal:** | | |
+{{- render_projects(projects_list,"personal") }}
 
 ---
 

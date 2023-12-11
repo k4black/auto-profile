@@ -97,9 +97,9 @@ skills:
         level: 3
       - name: GitHub-Actions
         level: 3
+      - name: Ansible
+        level: 2
       - name: ONNX
-        level: 1
-      - name: TensorRT
         level: 1
   - group: Languages
     tags:
@@ -246,7 +246,7 @@ projects:
     url: https://github.com/k4black/personal-infra
     type: personal
     year: 2023
-    tags: [Ansible, Infra-as-Code, Docker, GitHub-Actions, WireGuard, Linux, macOS]
+    tags: [Ansible, Infrastructure-as-Code, Docker, GitHub-Actions, WireGuard, Linux, macOS]
 
   - name: CodeBLEU
     description: Unofficial CodeBLEU metrics implementation as the original does not provide pip package, macOS support and usable interface;
