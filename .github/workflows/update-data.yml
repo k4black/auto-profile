@@ -60,7 +60,7 @@ jobs:
             -interaction=nonstopmode
             -file-line-error
       - name: Create CV artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: cv
           path: build/latex-cv/cv.pdf
