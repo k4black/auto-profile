@@ -25,7 +25,7 @@ summary:
   tagline: NLP Data Scientist
   short: Passionate NLP Scientist with 5+ years of experience, love NLG and arduous tasks;
   long:
-    - HSE, Russia graduate BaSc with Honors, MsA Erasmus Mundus LCT till 2024;
+    - BaSc with Honors in HSE, Russia, MsA Erasmus Mundus LCT till 2024;
     - 6+ years of programming experience;
     - 5+ years of Data Science Research experience in Startups, Yandex DS School, EPAM, and JetBrains;
     - Finished 8+ ML research projects.
@@ -55,10 +55,12 @@ skills:
         level: 2
       - name: NLU
         level: 2
-      - name: Summarization
+      - name: Compression
         level: 2
-      - name: Graph Models
+      - name: Summarization
         level: 1
+#      - name: Graph Models
+#        level: 1
       - name: Speech
       - name: CV
       - name: RL
@@ -79,12 +81,14 @@ skills:
     tags:
       - name: Python
         level: 3
+      - name: Rust
+        level: 2
       - name: C++
         level: 1
       - name: CUDA
         level: 1
       - name: GoLang
-      - name: Dart
+#      - name: Dart
   - group: Development Tools
     tags:
       - name: git
@@ -115,8 +119,8 @@ achievements:
   - Erasmus Mundus Scholarship 2022-2024;
   - Placed 2nd at Moscow State hackathon "Digital Transformation 2021";
   - Honours Bachelor's degree in CS;
-  - Largely improved Python course at YSDA, top-1 by students' rating;
-  - Accepted and Finished YSDA.
+  - Largely improved Python course at YSDA, Top-1 by students' rating;
+  - Finished YSDA - Master’s-level Data Science program, 3% acceptance rate.
 
 
 publications:
@@ -150,28 +154,29 @@ experience:
 #      - To be updated.
 #    tags: [Python, PyTorch, HuggingFace, RL, SkLearn, DataLore]
 
-  - role: Python Course Manager, Lecturer
+  - role: NLP Data Scientist
+    company: EPAM Systems
+    location: Serbia
+    url: https://www.epam.com/
+    start: Jan 2022
+    end: Sep 2022
+    description:
+      - Trained an unsupervised model for support ticket trends over time;
+      - Implemented a processing team predictive model, improving ticket processing efficiency by ~10s seconds per ticket for 100k tick./year.
+    tags: [Python, FastText, SkLearn, PyTorch, PyTest, Docker]
+
+  - role: Python Course Head, Lecturer
     company: Yandex School of Data Analysis
     location: Russia
     url: https://academy.yandex.com/dataschool/
     start: Jan 2021
     end: Present
     description:
+      - Led an Advanced Python course for 300-500 students yearly;
       - Managed a team of 9 people, planning, review, tech supervision;
-      - Conducted lectures on 'Packages and Modules', 'C-bindings';
+      - Conducted lectures on 'Packages and Modules', 'Rust-bindings';
       - Boosted assignment-checking system (e.g 6x acceleration).
     tags: [Management, Python, Teaching, Docker, PyTest, Gitlab-CI, Github-Actions]
-
-  - role: NLP Data Scientist
-    company: EPAM Systems
-    location: Serbia
-    url: https://www.epam.com/
-    start: Jan 2022
-    end: Aug 2022
-    description:
-      - Trained an unsupervised model for support ticket trends over time;
-      - Implemented a processing team predictive model, improving ticket processing efficiency by ~10s seconds per ticket for 100k tick./year.
-    tags: [Python, FastText, SkLearn, PyTorch, PyTest, Docker]
 
   - role: Research Engineer, Project Manager
     company: Gorky AI
@@ -185,8 +190,8 @@ experience:
 #      - Adapted Voice Conversion model for Russian, close to real speech;
 #      - Made unsupervised location recommendations for business;
 #      - Developed month accurate covid-19 prediction model,  rough for several months;
-      - Developed a highly-loaded 'roads quality' model on mobile data;
-      - Designed and developed a solution for scanned document analysis, trained a high mAP (~0.94) CV model for tables, pics, and stamps.
+      - Developed a high-loaded 'roads quality' model on sensors data;
+      - Designed and developed a solution for scanned document analysis, trained a high mAP (~0.94) CV model for tables, imgs, and stamps.
     tags: [Python, PyTorch, HuggingFace, SkLearn, PyTest, ONNX, Docker, Gitlab-CI]
 
   - role: Research Intern
