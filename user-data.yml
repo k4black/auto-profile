@@ -22,8 +22,8 @@ bio:
 
 
 summary:
-  tagline: NLP Data Scientist
-  short: Passionate NLP Scientist with 5+ years of experience, love NLG and arduous tasks;
+  tagline: NLP Researcher and Engineer
+  short: Passionate Researcher with 5+ years of experience, now doing XAI & LLM Compression
   long:
     - BaSc with Honors in HSE, Russia, MsA Erasmus Mundus LCT till 2024;
     - 6+ years of programming experience;
@@ -51,17 +51,19 @@ skills:
         level: 3
       - name: DL
         level: 3
-      - name: ML
+      - name: XAI
         level: 2
-      - name: NLU
+#      - name: ML
+#        level: 2
+      - name: Pruning
         level: 2
       - name: Compression
         level: 2
-      - name: Summarization
-        level: 1
+#      - name: Summarization
+#        level: 1
 #      - name: Graph Models
 #        level: 1
-      - name: Speech
+      - name: Speech Processing
       - name: CV
       - name: RL
   - group: Frameworks
@@ -215,7 +217,8 @@ education:
     end: Present
     description: |
       Erasmus Mundus "Language & Communication Technologies";
-      GPA: 8.2/10 (ongoing) +Assistant at Language Technology Project.
+      GPA: 8.7/10 (ongoing) +Assistant at Language Technology Project;
+      Thesis on Explainable AI for LLM pruning.
 
   - degree: Post Graduate 2-year Program (Data Science)
     institution: Yandex School of Data Analysis
@@ -236,6 +239,7 @@ education:
     honors: Cum Laude
     description: |
       GPA: 9.1/10; +Assistant at Algorithms and Data Structures.
+      Thesis on Abstractive Text Summarization \w Knowledge Graphs.
 
 
 certificates:
@@ -246,9 +250,9 @@ certificates:
 
 
 projects:
-  - name: Personal Infrastructure
-    description: Personal infra-as-code project for managing my laptop/vps/homeserver;
-    url: https://github.com/k4black/personal-infra
+  - name: Homelab
+    description: Personal infrastructure-as-code project for managing my laptop/vps/homeserver with Ansible;
+    url: https://github.com/k4black/homelab
     type: personal
     year: 2023
     tags: [Ansible, Infrastructure-as-Code, Docker, GitHub-Actions, WireGuard, Linux, macOS]
@@ -275,7 +279,7 @@ projects:
     tags: [Python, LaTeX, markdown, jinja2, GitHub-Actions]
 
   - name: Manytask
-    description: Auto students' assignments testing system /w gitlab integration;
+    description: Auto students' assignments testing system /w gitlab integration; Loaded about 1-2k students per year;
     url: https://github.com/manytask
     type: open-source
     year: 2023
