@@ -127,7 +127,7 @@ achievements:
 
 publications:
   - title: "LCT-1 at SemEval-2023 Task 10: Pre-training and Multi-task Learning for Sexism Detection and Classification"
-    venue: ACL-2023 workshop
+    venue: accepted, ACL-2023 workshop
     url: https://github.com/lct-rug-2022/edos-2023
     year: 2023
     authors: [K.Chernyshev, E.Garanina, D.bayram, Q.Zheng]
@@ -165,7 +165,7 @@ experience:
     description:
       - Trained an unsupervised model for support ticket trends over time;
       - Implemented a processing team predictive model, improving ticket processing efficiency by ~10s seconds per ticket for 100k tick./year.
-    tags: [Python, FastText, SkLearn, PyTorch, PyTest, Docker]
+    tags: [Python, FastText, SkLearn, PyTorch, HuggingFace, PyTest, Docker, Jenkins]
 
   - role: Python Course Head, Lecturer
     company: Yandex School of Data Analysis
@@ -209,7 +209,7 @@ experience:
 
 
 education:
-  - degree: Master of Arts (NLP)
+  - degree: Master of Science (NLP)
     institution: Groningen & Saarland Unis.
     location: Netherlands & Germany
     url: https://lct-master.org/
@@ -218,7 +218,7 @@ education:
     description: |
       Erasmus Mundus "Language & Communication Technologies";
       GPA: 8.7/10 (ongoing) +Assistant at Language Technology Project;
-      Thesis on Explainable AI for LLM pruning.
+      Thesis on Mechanistic Interpretability for LLM pruning.
 
   - degree: Post Graduate 2-year Program (Data Science)
     institution: Yandex School of Data Analysis
