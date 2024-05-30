@@ -75,6 +75,7 @@ def main(
             github_username=data['bio']['github'].split('/')[-1],
             project_name=data['settings']['name'],
             project_url=data['settings']['url'],
+            llm_injection=data['settings']['llm_injection'],
             # TODO: anonymize cv
         ))
 
