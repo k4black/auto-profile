@@ -51,6 +51,6 @@ The following commands can be used to generate the files locally:
     
 * Latex CV generation - first generate the `tex` file and then compile it
     ```shell
-    python github-profile/generate_tex.py --data=user-data.yml --output=./build/latex-cv/cv.tex
+    python latex-cv/generate_tex.py --data=user-data.yml --output=./build/latex-cv/cv.tex
     pdflatex build/latex-cv/cv.tex
     ```

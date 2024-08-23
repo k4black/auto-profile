@@ -146,6 +146,16 @@ publications:
 
 
 experience:
+  - role: Machine Learning Researcher
+    company: Toloka.ai
+    location: Germany
+    url: https://toloka.ai
+    start: Jun 2024
+    end: Present
+    description:
+      - To be updated.
+    tags: [PyTorch, HuggingFace, GenAi, Data Quality]
+
 #  - role: NLP Intern
 #    company: JetBrains Research
 #    location: Netherlands
@@ -197,16 +207,16 @@ experience:
       - Designed and developed a solution for scanned document analysis, trained a high mAP (~0.94) CV model for tables, imgs, and stamps.
     tags: [Python, PyTorch, HuggingFace, SkLearn, PyTest, ONNX, Docker, Gitlab-CI]
 
-  - role: Research Intern
-    company: LATNA Lab at Higher School of Economics
-    location: Russia
-    url: https://nnov.hse.ru/en/latna/
-    start: Apr 2019
-    end: Jan 2021
-    description:
-      - Conducted research on Compressed Sensing with l1 and l0 norms, resulting in a near SoTA recovery algorithm with faster convergence;
-      - Created Abstractive Summarization model using Knowledge Graphs.
-    tags: [Statistics, Python, HuggingFace, CoreNLP, SkLearn, SciPy]
+#  - role: Research Intern
+#    company: LATNA Lab at Higher School of Economics
+#    location: Russia
+#    url: https://nnov.hse.ru/en/latna/
+#    start: Apr 2019
+#    end: Jan 2021
+#    description:
+#      - Conducted research on Compressed Sensing with l1 and l0 norms, resulting in a near SoTA recovery algorithm with faster convergence;
+#      - Created Abstractive Summarization model using Knowledge Graphs.
+#    tags: [Statistics, Python, HuggingFace, CoreNLP, SkLearn, SciPy]
 
 
 education:
