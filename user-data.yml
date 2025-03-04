@@ -14,7 +14,7 @@ bio:
   name: Konstantin Chernyshev
   informal: Konstantin
   email: kdchernyshev+job@gmail.com
-  location: Saarbrücken, Germany
+  location: Berlin, Germany
   linkedin: linkedin.com/in/kdchernyshev
   linkedin_name: kdchernyshev
   github: github.com/k4black
@@ -25,7 +25,7 @@ bio:
 
 summary:
   tagline: NLP Researcher and Engineer
-  short: Passionate Researcher with 5+ years of experience, now doing XAI & LLM Compression
+  short: Passionate Researcher with 6+ years of experience, now doing evals, XAI & LLM Compression
   long:
     - BaSc with Honors in HSE, Russia, MsA Erasmus Mundus LCT till 2024;
     - 6+ years of programming experience;
