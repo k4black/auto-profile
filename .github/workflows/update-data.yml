@@ -48,7 +48,7 @@ jobs:
           python latex-cv/generate_tex.py --data=user-data.yml --output=build/latex-cv/cv.tex
           ls -lah build/latex-cv
       - name: Generate CV pdf file
-        uses: xu-cheng/latex-action@v3
+        uses: xu-cheng/latex-action@v4
         continue-on-error: true
         with:
           working_directory: build/latex-cv
