@@ -64,6 +64,7 @@ def main(
             short_summary=data['summary']['short'],
             summary=data['summary']['long'],
             experience_list=data['experience'],
+            internships_list=data['internships'],
             education_list=data['education'],
             certificates_list=data['certificates'],
             skills_list=data['skills'],

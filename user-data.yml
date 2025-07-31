@@ -25,32 +25,31 @@ bio:
 
 summary:
   tagline: NLP Researcher and Engineer
-  short: Passionate Researcher with 6+ years of experience, now doing evals, XAI & LLM Compression
+  short: Passionate Researcher with 6+ years of experience, doing XAI, Pruning and Agents;
   long:
-    - BaSc with Honors in HSE, Russia, MsA Erasmus Mundus LCT till 2024;
-    - 6+ years of programming experience;
-    - 5+ years of Data Science Research experience in Startups, Yandex DS School, EPAM, and JetBrains;
-    - Completed 8+ ML research projects.
+    - 6+ years of programming, 5+ of NLP Research experience in Startups, EPAM, JetBrains and Toloka AI;
+    - MsA with Honors at Erasmus Mundus LCT; BaSc with Honors in HSE, Russia;
+    - Completed 10+ ML research projects.
   github_profile: |
+    - 💼 NLP Researcher at [Toloka AI](https://toloka.ai/), former NLP at [EPAM Systems](https://www.epam.com/), and Intern at [JetBrains Research](https://www.jetbrains.com/research/);
     - 📄 Erasmus Mundus **['Language & Communication Technologies'](https://lct-master.org/) student** at the University of Groningen and Saarland University;
-    - 💼 Former NLP Data Scientist at [EPAM Systems](https://www.epam.com/) and NLP Intern at [Jetbrains Research](https://www.jetbrains.com/research/);
-    - 👨‍🏫 Lecturer and Python Course manager at the [Yandex School of Data Analysis](https://academy.yandex.com/dataschool/);
-    - 💻 Interested in NLP, Interpretability, SP, as well as in efficient DL-models Inference;
+    - 👨‍🏫 Lecturer and Ex. Python Course manager at the [Yandex School of Data Analysis](https://academy.yandex.com/dataschool/);
+    - 💻 Interested in NLP, Interpretability, Pruning and Human-AI collaboration;
     - 📝 More: [CV file](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/k4black/k4black/main/chernyshev_cv.pdf) or [linkedin.com/in/kdchernyshev](https://www.linkedin.com/in/kdchernyshev/) or mail me 😊. 
 
 
 personal:
   tags: [Music Production, Juggling, Slackline]
-  summary: >
-    Cheerful and sociable person, keen on slackline and juggling, 
-    love music making creativity and strive to master a guitar.
+  summary: Cheerful and sociable person, keen on slackline and juggling, love music making.
 
 skills:
   - group: Data Science
     tags:
       - name: NLP
         level: 3
-      - name: DL
+#      - name: DL
+#        level: 3
+      - name: Agents
         level: 3
       - name: XAI
         level: 2
@@ -119,8 +118,8 @@ skills:
 
 
 achievements:
-  - Erasmus Mundus Scholarship 2022-2024;
-  - Placed 2nd at Moscow State hackathon "Digital Transformation 2021";
+  - Erasmus Mundus Scholarship 2022-2024; Honours Master's degree in LCT;
+#  - Placed 2nd at Moscow State hackathon "Digital Transformation 2021";
   - Honours Bachelor's degree in CS;
   - Largely improved Python course at YSDA, Top-1 by students' rating;
   - Finished YSDA - Master’s-level Data Science program, 3% acceptance rate.
@@ -143,29 +142,28 @@ publications:
       In our experiments, multi-task learning performs on par with standard fine-tuning for sexism 
       detection and noticeably better for coarse-grained sexism classification, while fine-tuning is 
       preferable for fine-grained classification.
+  - title: "U-MATH: A University-Level Benchmark for Evaluating Mathematical Skills in LLMs"
+    venue: accepted, ACL-2025 workshop
+    url: https://toloka.ai/math-benchmark
+    year: 2025
+    authors: [K.Chernyshev, V.Polshkov, E.Artemova, A.Myasnikov, V.Stepanov, A.Miasnikov, S.Tilga]
+    abstract: >
+      The current evaluation of mathematical skills in LLMs is limited, as existing benchmarks are either relatively small, primarily focus on elementary and high-school problems, or lack diversity in topics. Additionally, the inclusion of visual elements in tasks remains largely under-explored.
+      To address these gaps, we introduce U-MATH, a novel benchmark of 1,100 unpublished open-ended university-level problems sourced from teaching materials. It is balanced across six core subjects, with 20% of multimodal problems. Given the open-ended nature of U-MATH problems, we employ an LLM to judge the correctness of generated solutions. To this end, we release μ-MATH, a dataset to evaluate the LLMs' capabilities in judging solutions.
+      The evaluation of general domain, math-specific, and multimodal LLMs highlights the challenges presented by U-MATH. Our findings reveal that LLMs achieve a maximum accuracy of only 63% on text-based tasks, with even lower 45% on visual problems. The solution assessment proves challenging for LLMs, with the best LLM judge having an F1-score of 80% on μ-MATH.
 
 
 experience:
   - role: Machine Learning Researcher
-    company: Toloka.ai
+    company: Toloka AI
     location: Germany
     url: https://toloka.ai
     start: Jun 2024
     end: Present
     description:
-      - To be updated.
+      - Collected and published benchmark for text+visual university-level math (U-MATH, ACL 2025 accepted);
+      - Developed a substantial part of Agentic Platform for Human-AI collaboration, improving the quality on 30%+;
     tags: [PyTorch, HuggingFace, GenAi, Data Quality]
-
-#  - role: NLP Intern
-#    company: JetBrains Research
-#    location: Netherlands
-#    url: https://www.jetbrains.com/research/
-#    start: Jun 2023
-#    end: Present
-#    description:
-#      - Analysing Internal Representation of code generation models;
-#      - To be updated.
-#    tags: [Python, PyTorch, HuggingFace, RL, SkLearn, DataLore]
 
   - role: NLP Data Scientist
     company: EPAM Systems
@@ -207,16 +205,19 @@ experience:
       - Designed and developed a solution for scanned document analysis, trained a high mAP (~0.94) CV model for tables, imgs, and stamps.
     tags: [Python, PyTorch, HuggingFace, SkLearn, PyTest, ONNX, Docker, Gitlab-CI]
 
-#  - role: Research Intern
-#    company: LATNA Lab at Higher School of Economics
-#    location: Russia
-#    url: https://nnov.hse.ru/en/latna/
-#    start: Apr 2019
-#    end: Jan 2021
-#    description:
-#      - Conducted research on Compressed Sensing with l1 and l0 norms, resulting in a near SoTA recovery algorithm with faster convergence;
-#      - Created Abstractive Summarization model using Knowledge Graphs.
-#    tags: [Statistics, Python, HuggingFace, CoreNLP, SkLearn, SciPy]
+
+internships:
+  - company: JetBrains Research
+    location: Netherlands
+    url: https://www.jetbrains.com/research/
+    date: Summer 2023
+    description: Analyzed Internal Representation of code generation models.
+
+  - company: LATNA Lab at Higher School of Economics
+    location: Russia
+    url: https://nnov.hse.ru/en/latna/
+    date: 2019 - 2020
+    description: Created Abstractive Summarization model using Knowledge Graphs.
 
 
 education:
@@ -225,10 +226,10 @@ education:
     location: Netherlands & Germany
     url: https://lct-master.org/
     start: Sep 2022
-    end: Present
+    end: Aug 2024
     description: |
       Erasmus Mundus "Language & Communication Technologies";
-      GPA: 8.7/10 (ongoing) +Assistant at Language Technology Project;
+      GPA: 8.7/10 +Assistant at Language Technology Project;
       Thesis on Mechanistic Interpretability for LLM pruning.
 
   - degree: Post Graduate 2-year Program (Data Science)

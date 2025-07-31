@@ -184,6 +184,11 @@
         \bigskip%
     (# endfor #)
 
+    \smallskip\divider%
+    \vspace{-0.4em}
+    \textbf{Internships:} (#- for internship in internships_list -#) \ihref{(( internship.url ))}{(( _process_text_to_latex(internship.company) ))} ((internship.date))((", " if not loop.last else ";")) (#- endfor -#)
+    \bigskip
+
     \vspace{-0.3em} % TODO: fix
     \cvsection{Education}
     (# for education in education_list #)
