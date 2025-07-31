@@ -216,16 +216,14 @@ internships:
     date: 2023
     description: Analyzed Internal Representation of code generation models.
 
-  - company: University of Groningen
+  - company: GroNLP at University of Groningen
     location: Netherlands
-    role: Research Intern
     url: https://www.rug.nl/
     date: 2022
     description: Developed token-level alignment tool for MT evaluation.
 
   - company: LATNA at Higher School of Economics
     location: Russia
-    role: Research Intern
     url: https://nnov.hse.ru/en/latna/
     date: 2019-2020
     description: Created Abstractive Summarization model using Knowledge Graphs.
