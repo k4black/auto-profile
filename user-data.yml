@@ -213,13 +213,21 @@ internships:
   - company: JetBrains Research
     location: Netherlands
     url: https://www.jetbrains.com/research/
-    date: Summer 2023
+    date: 2023
     description: Analyzed Internal Representation of code generation models.
 
-  - company: LATNA Lab at Higher School of Economics
+  - company: University of Groningen
+    location: Netherlands
+    role: Research Intern
+    url: https://www.rug.nl/
+    date: 2022
+    description: Developed token-level alignment tool for MT evaluation.
+
+  - company: LATNA at Higher School of Economics
     location: Russia
+    role: Research Intern
     url: https://nnov.hse.ru/en/latna/
-    date: 2019 - 2020
+    date: 2019-2020
     description: Created Abstractive Summarization model using Knowledge Graphs.
 
 
