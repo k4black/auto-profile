@@ -186,7 +186,7 @@
 
     \smallskip\divider%
     \vspace{-0.4em}
-    \textbf{Internships:} (#- for internship in internships_list -#) \ihref{(( internship.url ))}{(( _process_text_to_latex(internship.company) ))} ((internship.date))((", " if not loop.last else ";")) (#- endfor -#)
+    \textbf{Internships:} (#- for internship in internships_list -#) \ihref{(( internship.url ))}{(( _process_text_to_latex(internship.company) ))} (((internship.date)))((", " if not loop.last else ";")) (#- endfor -#)
     \bigskip
 
     \vspace{-0.3em} % TODO: fix
@@ -195,7 +195,7 @@
         \cvevent
             {(( _process_text_to_latex(education.degree) ))}
             {\ihref{(( education.url ))}{(( _process_text_to_latex(education.institution) ))}}
-            {(( education.start )) --\,(( education.end ))}
+            {(#- if include_education_dates -#)(( education.start )) --\,(( education.end ))(#- endif -#)}
             {(( _process_text_to_latex(education.location) ))}%
         \cvbox[\linewidth]{(( _process_text_to_latex(education.description) ))}\hfill\par%%
         \bigskip%
