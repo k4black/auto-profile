@@ -73,6 +73,7 @@ def main(
             achievements_list=data['achievements'],
             personal_summary=data['personal']['summary'],
             personal_tags_list=data['personal']['tags'],
+            include_personal_block=data['settings'].get('include-personal-block', True),
             github_username=data['bio']['github'].split('/')[-1],
             project_name=data['settings']['name'],
             project_url=data['settings']['url'],

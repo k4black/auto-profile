@@ -29,7 +29,6 @@
 %% new: for using \today
 %\RequirePackage{datetime2}
 \RequirePackage[en-US]{datetime2}
-\DTMlangsetup{showdayofmonth=false}
 
 
 
@@ -148,9 +147,9 @@
   %    \makecvheader{}
   %\end{fullwidth}
   \makecvfooter
-      {Made using \ihref[\faGithub]{((project_url))}{((project_name))}}
+      {Made using my \ihref[\faGithub]{((project_url))}{((project_name))} project}
       {}
-      {Updated \today}%
+      {Updated \ifcase\month\or January\or February\or March\or April\or May\or June\or July\or August\or September\or October\or November\or December\fi\ \the\year}%
   \makecvinjection{(( _process_text_to_latex(llm_injection) ))}
 
   %% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
@@ -302,10 +301,12 @@
     \end{itemize}
     \medskip
 
+    (#- if include_personal_block #)
     \cvsection{Personal}
     \smallskip
     ((personal_summary))\\
      (#- for tag in personal_tags_list #) \cvsmalltag{((tag))} (#- endfor #)
+    (#- endif #)
 
 
   \end{paracol}
