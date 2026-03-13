@@ -39,7 +39,8 @@ def main(
             skills_list=data['skills'],
             projects_list=data['projects'],
             github_username=data['bio']['github'].split('/')[-1],
-            include_stats=data['settings'].get('include_stats', True),
+            include_stats=data['settings'].get('include-github-stats', True),
+            include_projects_table=data['settings'].get('include-projects-table', True),
         ))
 
 

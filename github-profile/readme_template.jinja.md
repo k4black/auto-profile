@@ -29,6 +29,7 @@
 ---
 
 
+{% if include_projects_table %}
 ### 📦 Projects
 {%- macro render_projects(projects,type) %}
    {%- for project in projects -%}
@@ -48,6 +49,7 @@
 {{- render_projects(projects_list,"personal") }}
 
 ---
+{% endif %}
 
 {%  if include_stats %}
 ### ⚡ Github Stats
