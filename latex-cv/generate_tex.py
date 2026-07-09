@@ -1,3 +1,4 @@
+import re
 from pathlib import Path
 
 from jinja2 import Template
@@ -26,6 +27,8 @@ def _process_text_to_latex(text: str) -> str:
     text = text.strip()
     for symbol, replacement in symbols_to_replace.items():
         text = text.replace(symbol, replacement)
+    # markdown-style bold: **text** -> \textbf{text} (after escaping, so user braces stay escaped)
+    text = re.sub(r'\*\*(.+?)\*\*', r'\\textbf{\1}', text)
     return text
 
 
