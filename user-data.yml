@@ -182,8 +182,8 @@ experience:
     description:
       - ACL 2025 accepted, multimodal university-level Math Benchmark;
       - Developed a substantial part of Agentic+Human collab system;
-      - Built Evaluation and led Agentic QA, improved quality on 30%+;
-    tags: [Evaluation, Agents, Synth Data, Bench design, HF, Human-AI QA]
+      - Led Agentic Evals and led QA Agent, quality +30%, cost 1/3;
+    tags: [Evaluation, Agents, Synth Data, Eval design, HF, Human-AI QA]
 
   - role: NLP Data Scientist
     company: EPAM Systems
