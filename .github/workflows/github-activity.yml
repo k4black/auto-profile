@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       startDate:
-        description: 'Backfill start date (YYYY/MM/DD). Leave empty for incremental mode.'
+        description: 'Backfill start date (YYYY/MM/DD). Leave empty for incremental mode (read from LAST_UPDATED).'
       endDate:
         description: 'Backfill end date (YYYY/MM/DD). Defaults to today.'
 
@@ -36,23 +36,23 @@ jobs:
       - name: Determine date range
         id: range
         run: |
+          END="${{ inputs.endDate }}"
+          [ -z "$END" ] && END=$(date +%Y/%m/%d)
           if [ -n "${{ inputs.startDate }}" ]; then
             START="${{ inputs.startDate }}"
             MODE=backfill
-          else
-            LAST=$(git log -1 --format=%cI 2>/dev/null || echo "")
-            if [ -z "$LAST" ]; then
-              START="2019/06/01"
-            else
-              START=$(date -d "$LAST + 1 day" +%Y/%m/%d)
-            fi
+          elif [ -f LAST_UPDATED ]; then
+            LAST=$(cat LAST_UPDATED)
+            START=$(date -d "$LAST + 1 day" +%Y/%m/%d)
             MODE=incremental
+          else
+            START="2019/06/01"
+            MODE=initial
           fi
-          END="${{ inputs.endDate }}"
-          [ -z "$END" ] && END=$(date +%Y/%m/%d)
           echo "start=$START" >> $GITHUB_OUTPUT
           echo "end=$END"    >> $GITHUB_OUTPUT
           echo "mode=$MODE"  >> $GITHUB_OUTPUT
+          echo "Range: $START -> $END (mode=$MODE)"
 
       - name: Generate commits with fake-git-history
         run: |
@@ -65,9 +65,9 @@ jobs:
 
       - name: Replay commits into activity repo
         run: |
-          cd git-history
-          # newest-first; reverse so oldest commits land first
-          git log --format=%cI > ../dates.txt
+          cd my-history
+          # git log is newest-first; reverse so oldest commits land first
+          git log --format=%aI > ../dates.txt
           cd ..
           tac dates.txt > dates_rev.txt
           added=0
@@ -81,11 +81,23 @@ jobs:
             fi
           done < dates_rev.txt
           echo "Replayed $added commits from ${{ steps.range.outputs.start }} to ${{ steps.range.outputs.end }}"
-          rm -f activity.txt dates.txt dates_rev.txt
+          rm -rf my-history dates.txt dates_rev.txt
+
+      - name: Update LAST_UPDATED marker
+        run: |
+          TODAY=$(date +%Y-%m-%d)
+          echo "$TODAY" > LAST_UPDATED
+          git add LAST_UPDATED
+          NOW=$(date -Iseconds)
+          if ! GIT_AUTHOR_DATE="$NOW" GIT_COMMITTER_DATE="$NOW" \
+            git diff --cached --quiet; then
+            GIT_AUTHOR_DATE="$NOW" GIT_COMMITTER_DATE="$NOW" \
+              git commit --quiet -m "chore: update LAST_UPDATED to $TODAY"
+          fi
 
       - name: Push
         run: |
-          if [ "${{ steps.range.outputs.mode }}" = "backfill" ]; then
+          if [ "${{ steps.range.outputs.mode }}" = "backfill" ] || [ "${{ steps.range.outputs.mode }}" = "initial" ]; then
             git push --force
           else
             git push
