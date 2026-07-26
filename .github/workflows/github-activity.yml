@@ -3,7 +3,7 @@ name: Generate GitHub activity
 
 on:
   schedule:
-    - cron: '0 14 * * 1-5'
+    - cron: '0 14 * * 1'
   workflow_dispatch:
     inputs:
       startDate:
