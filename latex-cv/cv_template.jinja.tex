@@ -51,8 +51,8 @@
 \fi
 
 % Change the colours if you want to
-\definecolor{Accent}{HTML}{2B7A89}
-\definecolor{LightAccent}{HTML}{2da0c5}
+\definecolor{Accent}{HTML}{2B658A}
+\definecolor{LightAccent}{HTML}{2D85C5}
 \definecolor{SlateGrey}{HTML}{2E2E2E}
 \definecolor{Grey}{HTML}{505050}
 \definecolor{LightGrey}{HTML}{AAAAAA}
@@ -77,6 +77,12 @@
 % for \cvskill if you want to
 \renewcommand{\itemmarker}{{\small\textbullet}}
 \renewcommand{\ratingmarker}{\faCircle}
+
+% Override class pill style: blue-tinted border/text instead of grey,
+% so skill tags stay in the same palette as headings and links
+\renewcommand{\cvsmalltagraw}[2][0]{%
+    \tikz[baseline]\node[anchor=base,draw=accent!50,fill=accent!#1,text=emphasis,rounded corners=1.2ex,inner xsep=0.6ex,inner ysep=0.6ex,text height=1.2ex,text depth=0.0ex,minimum height=1.2ex]{#2};
+}
 
 %% Use (and optionally edit if necessary) this .tex if you
 %% want to use an author-year reference style like APA(6)
@@ -108,7 +114,7 @@
 
 
   %% You can add multiple photos on the left or right
-  \photoR{2.8cm}{photo_summer_2026.jpeg}
+  \photoR{2.8cm}{photo_summer_2026.jpg}
   % \photoL{2.5cm}{Yacht_High,Suitcase_High}
 
   \personalinfo{%
@@ -178,7 +184,7 @@
                   \item (( _process_text_to_latex(description) ))
                 (#- endfor #)
             \end{itemize}%
-            \hspace{1em}\cvsmalltagline{ (#- for tag in experience.tags -#) (( tag ))((", " if not loop.last else "")) (#- endfor -#) }\smallskip
+            \hspace{1em}{\footnotesize\textcolor{light}{ (#- for tag in experience.tags -#) (( tag ))((" \\,\\textbar\\, " if not loop.last else "")) (#- endfor -#) }}\par\smallskip
         }\hfill\par%%
         \bigskip%
     (# endfor #)
@@ -207,9 +213,6 @@
         \cvbox[\linewidth]{(( _process_text_to_latex(education.description) ))}\hfill\par%%
         \bigskip%
     (# endfor #)
-
-    \smallskip\divider%
-    \vspace{-0.6em} % TODO: fix
 %
 %    \cvevent
 %        {Courses and Certificates}
@@ -273,7 +276,7 @@
             (#- for skill_group in skills_list #)
                 \item \textcolor{emphasis}{(( skill_group.group ))}\par
                 (#- for skill in skill_group.tags -#)
-                    \cvsmalltag[(( skill.level ))0]{(( skill.name ))}
+                    \cvsmalltag[(( skill.level|default(0) * 15 ))]{(( skill.name ))}
                 (#- endfor -#)
             (#- endfor #)
         \end{itemize}

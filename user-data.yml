@@ -185,7 +185,7 @@ experience:
     start: Jun 2024
     end: Present
     description:
-      - Led company-wide **QA agent**, **+30% quality** at **1/3 cost**;
+      - Led company-wide **QA agent**, improved **+30% quality** at **1/3 cost**;
       - Built substantial part of Tendem **hybrid human+AI** platform;
       - "**First-author** of U-MATH (ACL 2025), university-level multimodal **math benchmark** & **LLM-as-judge** meta-eval;"
       - "Trained multi-GPU **SFT** /w **model merging** for math; **agentic synth-data** for complex cases;" # **RL** training;
@@ -222,7 +222,7 @@ experience:
     start: Apr 2020
     end: Jan 2022
     description:
-      - Led 2-4 developer teams; introduced CI/CD and code review;
+      - Led 4-developer team; introduced CI/CD and code review;
       # - Managed 2-4 developers per project, liaising with clients;
       # - Introduced Align flow, CI/CD, code reviews, improved teamwork;
       #      - Adapted Voice Conversion model for Russian, close to real speech;
